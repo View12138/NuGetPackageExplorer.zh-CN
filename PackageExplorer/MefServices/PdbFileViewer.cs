@@ -47,7 +47,7 @@ namespace PackageExplorer
                         {
                             new TabItem
                             {
-                                Header = "PDB Info",
+                                Header = "PDB 信息",
                                 Content = new ScrollViewer
                                 {
                                     HorizontalScrollBarVisibility = ScrollBarVisibility.Auto,
@@ -60,7 +60,7 @@ namespace PackageExplorer
                             },
                             new TabItem
                             {
-                                Header = "PDB Sources",
+                                Header = "PDB 来源",
                                 Content = new ScrollViewer
                                 {
                                     HorizontalScrollBarVisibility = ScrollBarVisibility.Auto,
@@ -83,7 +83,7 @@ namespace PackageExplorer
 #pragma warning restore CA2000 // Dispose objects before losing scope
             return new TextBlock()
             {
-                Text = "Full PDB files requires the EXE or DLL to be alongside."
+                Text = "完整的 PDB 文件需要在 EXE 或 DLL 旁。"
             };
 
         }
