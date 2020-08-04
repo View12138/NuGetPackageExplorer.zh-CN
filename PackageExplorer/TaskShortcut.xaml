@@ -10,35 +10,35 @@
 	<theme:SystemDropShadowChrome>
 		<HeaderedContentControl Padding="10" Foreground="#CCFFFFFF">
 			<HeaderedContentControl.Header>
-                <TextBlock Text="Common tasks" FontSize="{Binding FontSize, Mode=OneWay, Source={StaticResource Settings}, Converter={StaticResource SubtracterConverter}, ConverterParameter=-5}" />
+                <TextBlock Text="公共任务" FontSize="{Binding FontSize, Mode=OneWay, Source={StaticResource Settings}, Converter={StaticResource SubtracterConverter}, ConverterParameter=-5}" />
 			</HeaderedContentControl.Header>
 
 			<UniformGrid Columns="1" Rows="4">
 				<Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Padding="10,6" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Command="Open">
 					<StackPanel Orientation="Horizontal">
                         <ContentControl Content="{StaticResource BlueArrowIcon}" />
-                        <TextBlock Text="Open a local package (Ctrl+O)" />
+                        <TextBlock Text="从本地打开一个包 (Ctrl+O)" />
 					</StackPanel>
 				</Button>
 
 				<Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Padding="10,6" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Command="Print">
 					<StackPanel Orientation="Horizontal">
                         <ContentControl Content="{StaticResource BlueArrowIcon}" />
-                        <TextBlock Text="Open a package from online feed (Ctrl+G)" />
+                        <TextBlock Text="从在线源打开一个包 (Ctrl+G)" />
 					</StackPanel>
 				</Button>
 
 				<Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Padding="10,6" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Command="New">
 					<StackPanel Orientation="Horizontal">
                         <ContentControl Content="{StaticResource BlueArrowIcon}" />
-                        <TextBlock Text="Create a new package (Ctrl+N)" />
+                        <TextBlock Text="创建一个新的包 (Ctrl+N)" />
 					</StackPanel>
 				</Button>
 
 				<Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Padding="10,6" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Command="GoToPage" CommandParameter="https://docs.nuget.org">
 					<StackPanel Orientation="Horizontal">
                         <ContentControl Content="{StaticResource BlueArrowIcon}" />
-                        <TextBlock Text="Read NuGet documentation" />
+                        <TextBlock Text="阅读 NuGet 文档" />
 					</StackPanel>
 				</Button>
 			</UniformGrid>
