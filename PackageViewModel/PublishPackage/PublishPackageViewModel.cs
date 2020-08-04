@@ -102,7 +102,7 @@ namespace PackageExplorerViewModel
                             }
                             catch (Exception e)
                             {
-                                _uiServices.Show("Cannot read API key:\n" + e.Message, MessageLevel.Error);
+                                _uiServices.Show("无法读取API密钥：\n" + e.Message, MessageLevel.Error);
                                 PublishKeyOrPAT = null;
                             }
                         }
@@ -240,7 +240,7 @@ namespace PackageExplorerViewModel
             DiagnosticsClient.TrackEvent("PushPackage");
 
             ShowProgress = true;
-            Status = (PublishAsUnlisted == true) ? "Publishing and unlisting package..." : "Publishing package...";
+            Status = (PublishAsUnlisted == true) ? "正在发布不可列出的包..." : "正在发布包...";
             HasError = false;
             CanPublish = false;
 
