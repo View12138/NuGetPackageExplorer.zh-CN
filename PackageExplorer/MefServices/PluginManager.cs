@@ -294,7 +294,7 @@ namespace PackageExplorer
                 var errorMessage = exception is ReflectionTypeLoadException re ? BuildErrorMessage(re) : exception.Message;
                 if (quietMode)
                 {
-                    Trace.WriteLine(errorMessage, "Plugins Loader");
+                    Trace.WriteLine(errorMessage, "扩展加载器");
                 }
                 else
                 {
@@ -402,7 +402,7 @@ namespace PackageExplorer
 
         private static string BuildErrorMessage(ReflectionTypeLoadException exception)
         {
-            var builder = new StringBuilder("One or more errors occurred while loading the selected plugin:");
+            var builder = new StringBuilder("加载选定插件时，发生一个或多个错误:");
             builder.AppendLine();
             builder.AppendLine();
 
