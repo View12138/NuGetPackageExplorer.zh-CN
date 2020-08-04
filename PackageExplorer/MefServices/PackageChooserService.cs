@@ -77,8 +77,8 @@ namespace PackageExplorer
             {
 
                 var packageName = packageInfo.Id + "." + packageInfo.Version + NuGetPe.Constants.PackageExtension;
-                var title = "Save " + packageName;
-                const string filter = "NuGet package file (*.nupkg)|*.nupkg|NuGet Symbols package file (*.snupkg)|*.snupkg|All files (*.*)|*.*";
+                var title = "保存 " + packageName;
+                const string filter = "NuGet 包文件 (*.nupkg)|*.nupkg|NuGet 符号包文件 (*.snupkg)|*.snupkg|所有文件 (*.*)|*.*";
 
                 var accepted = UIServices.OpenSaveFileDialog(
                     title,
