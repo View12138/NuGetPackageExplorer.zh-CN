@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:self="clr-namespace:PackageExplorer" 
         FontSize="{Binding FontSize, Source={StaticResource Settings}}" 
-        Title="Pick Target Frameworks"
+        Title="选择目标框架"
         WindowStartupLocation="CenterOwner" 
         SizeToContent="WidthAndHeight" 
         ShowInTaskbar="False"
@@ -22,12 +22,12 @@
     </self:StandardDialog.Resources>
     
     <DockPanel LastChildFill="True">
-        <Label DockPanel.Dock="Top" Content="_Target frameworks:" />
+        <Label DockPanel.Dock="Top" Content="目标框架(_t):" />
 
         <Border DockPanel.Dock="Bottom" BorderThickness="0,0.5,0,0" BorderBrush="{DynamicResource ResourceKey={x:Static SystemColors.ActiveBorderBrushKey}}" Background="{DynamicResource ResourceKey={x:Static SystemColors.ControlBrushKey}}">
             <UniformGrid HorizontalAlignment="Right" Margin="10,5" Rows="1" Columns="2">
-                <Button x:Name="OKButton" IsDefault="True" Content="OK" Margin="5" IsEnabled="False" Click="OkButton_Click" />
-                <Button IsCancel="True" Content="Cancel" Margin="5,5,0,5" Padding="15,2" Click="CancelButton_Click" />
+                <Button x:Name="OKButton" IsDefault="True" Content="确认" Margin="5" IsEnabled="False" Click="OkButton_Click" />
+                <Button IsCancel="True" Content="取消" Margin="5,5,0,5" Padding="15,2" Click="CancelButton_Click" />
             </UniformGrid>
         </Border>
 
@@ -49,10 +49,10 @@
                 <!-- .NET Framework -->
                 <CheckBox x:Name="NetCheckBox" Grid.Row="0" VerticalAlignment="Center" Checked="EvaluateButtonEnabledState" Unchecked="EvaluateButtonEnabledState" />
                 <ComboBox x:Name="NetFx" Grid.Row="0" IsEnabled="{Binding IsChecked, ElementName=NetCheckBox, Mode=OneWay}">
-                    <ComboBoxItem Tag="net4">.NET Framework 4 and higher</ComboBoxItem>
-                    <ComboBoxItem Tag="net403">.NET Framework 4.0.3 and higher</ComboBoxItem>
-                    <ComboBoxItem Tag="net45">.NET Framework 4.5 and higher</ComboBoxItem>
-                    <ComboBoxItem Tag="net451">.NET Framework 4.5.1 and higher</ComboBoxItem>
+                    <ComboBoxItem Tag="net4">.NET Framework 4 及更高</ComboBoxItem>
+                    <ComboBoxItem Tag="net403">.NET Framework 4.0.3 及更高</ComboBoxItem>
+                    <ComboBoxItem Tag="net45">.NET Framework 4.5 及更高</ComboBoxItem>
+                    <ComboBoxItem Tag="net451">.NET Framework 4.5.1 及更高</ComboBoxItem>
                 </ComboBox>
 
                 <!-- Windows -->
@@ -65,10 +65,10 @@
                 <!-- Windows Phone Silverlight -->
                 <CheckBox x:Name="WPSLCheckBox" Grid.Row="2" VerticalAlignment="Center" Checked="EvaluateButtonEnabledState" Unchecked="EvaluateButtonEnabledState" />
                 <ComboBox x:Name="WPSLFx" Grid.Row="2" IsEnabled="{Binding IsChecked, ElementName=WPSLCheckBox, Mode=OneWay}">
-                    <ComboBoxItem Tag="wp7">Windows Phone Silverlight 7 and higher</ComboBoxItem>
-                    <ComboBoxItem Tag="wp71">Windows Phone Silverlight 7.5 and higher</ComboBoxItem>
-                    <ComboBoxItem Tag="wp8">Windows Phone Silverlight 8 and higher</ComboBoxItem>
-                    <ComboBoxItem Tag="wp81">Windows Phone Silverlight 8.1 and higher</ComboBoxItem>
+                    <ComboBoxItem Tag="wp7">Windows Phone Silverlight 7 及更高</ComboBoxItem>
+                    <ComboBoxItem Tag="wp71">Windows Phone Silverlight 7.5 及更高</ComboBoxItem>
+                    <ComboBoxItem Tag="wp8">Windows Phone Silverlight 8 及更高</ComboBoxItem>
+                    <ComboBoxItem Tag="wp81">Windows Phone Silverlight 8.1 及更高</ComboBoxItem>
                 </ComboBox>
 
                 <!-- Silverlight -->
