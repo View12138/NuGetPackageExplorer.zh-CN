@@ -68,7 +68,7 @@ namespace PackageExplorerViewModel
                 {
                     if (string.IsNullOrEmpty(AssemblyName))
                     {
-                        return _supportedFrameworks == null ? null : "Assembly name must not be empty.";
+                        return _supportedFrameworks == null ? null : "程序集名称不能为空。";
                     }
                 }
 
