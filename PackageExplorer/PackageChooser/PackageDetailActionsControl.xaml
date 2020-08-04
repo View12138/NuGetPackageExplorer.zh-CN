@@ -114,9 +114,9 @@
         </ListView>
 
         <StackPanel Grid.Row="1" Margin="0,5,0,5" Visibility="{Binding IsLoading, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="Loading..." />
+            <TextBlock Text="加载中..." />
             <Control Margin="7,0,7,0" Template="{StaticResource loadingAnimation}" />
-            <Button Content="Cancel" Padding="5,0,5,0" Command="{Binding CancelCommand}" />
+            <Button Content="取消" Padding="5,0,5,0" Command="{Binding CancelCommand}" />
         </StackPanel>
 
         <!-- Error Message -->
