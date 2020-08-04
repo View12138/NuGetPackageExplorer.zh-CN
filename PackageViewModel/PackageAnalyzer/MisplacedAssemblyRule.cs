@@ -51,7 +51,7 @@ namespace PackageExplorerViewModel.Rules
         {
             return new PackageIssue(
                 PackageIssueLevel.Warning,
-                "Assembly not inside a framework folder",
+                "程序集不在 framework 文件夹内",
                 "The assembly '" + target +
                 $"' is placed directly under '{folder}' folder. It is recommended that assemblies be placed inside a framework-specific folder.",
                 "Move it into a framework-specific folder. If this assembly is targeted for multiple frameworks, ignore this warning."
@@ -62,7 +62,7 @@ namespace PackageExplorerViewModel.Rules
         {
             return new PackageIssue(
                 PackageIssueLevel.Warning,
-                "Assembly outside known folders",
+                "已知文件夹之外的程序集",
                 "The assembly '" + target +
                 $"' is not inside the '{folder}' folder and hence it won't be used when the package is installed into a project",
                 "Move it into a known folder."

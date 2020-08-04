@@ -36,7 +36,7 @@
         </Grid.RowDefinitions>
 
         <!-- IsTabStop="True" here is to prevent scrolling down to the first focusable element which would be the first cell in the DataGrid -->
-        <TextBox Text="Type:" Style="{StaticResource Key}" IsTabStop="True" />
+        <TextBox Text="类型：" Style="{StaticResource Key}" IsTabStop="True" />
         <TextBox
             Grid.Column="1"            
             Text="{Binding PdbType, Mode=OneWay}"
@@ -44,7 +44,7 @@
 
         <TextBox
             Grid.Row="1"
-            Text="Compiler Flags Present:"
+            Text="已有编译器标志："
             Style="{StaticResource Key}" />
         <TextBox
             Grid.Row="1"
@@ -56,7 +56,7 @@
         <TextBox
             Grid.Row="2"
             Visibility="{Binding CompilerFlags, Converter={StaticResource NullToVisibilityConverter}}"
-            Text="Compiler Flags:"
+            Text="编译器标志："
             Style="{StaticResource Key}" />
 
         <ItemsControl Grid.IsSharedSizeScope="True"
@@ -84,7 +84,7 @@
         <TextBox
             Grid.Row="3"
             Visibility="{Binding MetadataReferences, Converter={StaticResource NullToVisibilityConverter}}"
-            Text="Metadata References:"
+            Text="Metadata 引用："
             Style="{StaticResource Key}" />
 
         <DataGrid
@@ -97,12 +97,12 @@
                 PreviewMouseWheel="DataGrid_PreviewMouseWheel"
             >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name, Mode=OneWay}"  />
-                <DataGridTextColumn Header="Extern Aliases" Binding="{Binding ExternAliases, Mode=OneWay, Converter={StaticResource StringCollectionsToStringConverter}}"  />
-                <DataGridTextColumn Header="Metadata Image Kind" Binding="{Binding MetadataImageKind, Mode=OneWay}"  />
-                <DataGridTextColumn Header="Embed Interop Types" Binding="{Binding EmbedInteropTypes, Mode=OneWay}"  />
-                <DataGridTextColumn Header="Timestamp" Binding="{Binding Timestamp, Mode=OneWay, StringFormat=0x{0:X}}"  />
-                <DataGridTextColumn Header="Image Size (bytes)" Binding="{Binding ImageSize, Mode=OneWay, StringFormat={}{0:#,#}}"  />
+                <DataGridTextColumn Header="名称" Binding="{Binding Name, Mode=OneWay}"  />
+                <DataGridTextColumn Header="外部别名" Binding="{Binding ExternAliases, Mode=OneWay, Converter={StaticResource StringCollectionsToStringConverter}}"  />
+                <DataGridTextColumn Header="Metadata 图像类型" Binding="{Binding MetadataImageKind, Mode=OneWay}"  />
+                <DataGridTextColumn Header="嵌入的互操作类型" Binding="{Binding EmbedInteropTypes, Mode=OneWay}"  />
+                <DataGridTextColumn Header="时间戳" Binding="{Binding Timestamp, Mode=OneWay, StringFormat=0x{0:X}}"  />
+                <DataGridTextColumn Header="图像大小 (bytes)" Binding="{Binding ImageSize, Mode=OneWay, StringFormat={}{0:#,#}}"  />
                 <DataGridTextColumn Header="MVID" Binding="{Binding Mvid, Mode=OneWay}"  />
             </DataGrid.Columns>
         </DataGrid>
