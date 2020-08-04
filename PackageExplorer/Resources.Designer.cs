@@ -61,7 +61,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 作者: 的本地化字符串。
+        ///   查找类似 作者： 的本地化字符串。
         /// </summary>
         public static string Dialog_CreatedByLabel {
             get {
@@ -70,7 +70,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 依赖项: 的本地化字符串。
+        ///   查找类似 依赖项： 的本地化字符串。
         /// </summary>
         public static string Dialog_DependenciesLabel {
             get {
@@ -88,7 +88,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 开发依赖项: 的本地化字符串。
+        ///   查找类似 开发依赖项： 的本地化字符串。
         /// </summary>
         public static string Dialog_DevelopmentDependencyLabel {
             get {
@@ -115,7 +115,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 框架程序集引用: 的本地化字符串。
+        ///   查找类似 框架程序集引用： 的本地化字符串。
         /// </summary>
         public static string Dialog_FrameworkAssembliesLabel {
             get {
@@ -124,7 +124,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Compiler Flags: 的本地化字符串。
+        ///   查找类似 编译器标记： 的本地化字符串。
         /// </summary>
         public static string Dialog_HasCompilerFlags {
             get {
@@ -133,7 +133,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Health: 的本地化字符串。
+        ///   查找类似 健壮性： 的本地化字符串。
         /// </summary>
         public static string Dialog_Health {
             get {
@@ -142,7 +142,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Id: 的本地化字符串。
+        ///   查找类似 包 Id： 的本地化字符串。
         /// </summary>
         public static string Dialog_IdLabel {
             get {
@@ -151,7 +151,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Information 的本地化字符串。
+        ///   查找类似 信息 的本地化字符串。
         /// </summary>
         public static string Dialog_Information {
             get {
@@ -160,7 +160,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 The package URL {0} is invalid and can not be opened. 的本地化字符串。
+        ///   查找类似 包 URL {0} 无效且无法打开。 的本地化字符串。
         /// </summary>
         public static string Dialog_InvalidPackageUrl {
             get {
@@ -169,7 +169,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Language: 的本地化字符串。
+        ///   查找类似 语言： 的本地化字符串。
         /// </summary>
         public static string Dialog_LanguageLabel {
             get {
@@ -178,7 +178,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 License Meta: 的本地化字符串。
+        ///   查找类似 许可证 Meta： 的本地化字符串。
         /// </summary>
         public static string Dialog_LicenceMeta {
             get {
@@ -187,7 +187,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Expression: 的本地化字符串。
+        ///   查找类似 表达式： 的本地化字符串。
         /// </summary>
         public static string Dialog_LicenseExpression {
             get {
@@ -196,7 +196,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Expression Version: 的本地化字符串。
+        ///   查找类似 表达式版本： 的本地化字符串。
         /// </summary>
         public static string Dialog_LicenseExpressionVersion {
             get {
@@ -205,7 +205,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Min client version: 的本地化字符串。
+        ///   查找类似 最小客户端版本： 的本地化字符串。
         /// </summary>
         public static string Dialog_MinVersionLabel {
             get {
@@ -214,7 +214,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Package Information 的本地化字符串。
+        ///   查找类似 包信息 的本地化字符串。
         /// </summary>
         public static string Dialog_MoreInfo {
             get {
@@ -223,7 +223,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 No Dependencies 的本地化字符串。
+        ///   查找类似 没有依赖项 的本地化字符串。
         /// </summary>
         public static string Dialog_NoDependencyLabel {
             get {
@@ -232,7 +232,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 All supported files|*.nupkg;*.snupkg;*.nuspec|NuGet package file (*.nupkg)|*.nupkg|NuGet Symbols package file (*.snupkg)|*.snupkg|NuSpec file (*.nuspec)|*.nuspec 的本地化字符串。
+        ///   查找类似 所有支持的文件|*.nupkg;*.snupkg;*.nuspec|NuGet包文件 (*.nupkg)|*.nupkg|NuGet 符号包文件 (*.snupkg)|*.snupkg|NuSpec 文件 (*.nuspec)|*.nuspec 的本地化字符串。
         /// </summary>
         public static string Dialog_OpenFileFilter {
             get {
@@ -241,7 +241,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Owners: 的本地化字符串。
+        ///   查找类似 所有者： 的本地化字符串。
         /// </summary>
         public static string Dialog_OwnersLabel {
             get {
@@ -250,7 +250,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Publisher: 的本地化字符串。
+        ///   查找类似 发布者： 的本地化字符串。
         /// </summary>
         public static string Dialog_PublisherLabel {
             get {
@@ -259,7 +259,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Report Abuse 的本地化字符串。
+        ///   查找类似 报告滥用 的本地化字符串。
         /// </summary>
         public static string Dialog_ReportAbuse {
             get {
@@ -268,7 +268,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Branch: 的本地化字符串。
+        ///   查找类似 分支： 的本地化字符串。
         /// </summary>
         public static string Dialog_RepositoryBranch {
             get {
@@ -277,7 +277,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Commit: 的本地化字符串。
+        ///   查找类似 提交： 的本地化字符串。
         /// </summary>
         public static string Dialog_RepositoryCommit {
             get {
@@ -286,7 +286,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Repository: 的本地化字符串。
+        ///   查找类似 存储库： 的本地化字符串。
         /// </summary>
         public static string Dialog_RepositoryLabel {
             get {
@@ -295,7 +295,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Type: 的本地化字符串。
+        ///   查找类似 类型： 的本地化字符串。
         /// </summary>
         public static string Dialog_RepositoryType {
             get {
@@ -304,7 +304,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Url: 的本地化字符串。
+        ///   查找类似 Url： 的本地化字符串。
         /// </summary>
         public static string Dialog_RepositoryUrl {
             get {
@@ -313,7 +313,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Requires License Acceptance: 的本地化字符串。
+        ///   查找类似 要求接收许可证： 的本地化字符串。
         /// </summary>
         public static string Dialog_RequireLicenseLabel {
             get {
@@ -322,7 +322,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Do you want to save your changes? 的本地化字符串。
+        ///   查找类似 你想保存更改吗？ 的本地化字符串。
         /// </summary>
         public static string Dialog_SaveQuestion {
             get {
@@ -331,7 +331,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Serviceable: 的本地化字符串。
+        ///   查找类似 可用的： 的本地化字符串。
         /// </summary>
         public static string Dialog_ServiceableLabel {
             get {
@@ -340,9 +340,8 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 The external url wants to add a publish source to NuGet Package Explorer.
-        ///
-        ///Do you want to add &apos;{0}&apos; to the list of package publish sources? 的本地化字符串。
+        ///   查找类似 外部 Url 希望向 NuGet 包浏览器 添加发布源。
+        ///是否要将 &apos;{0}&apos; 添加到包发布源列表中? 的本地化字符串。
         /// </summary>
         public static string Dialog_SetActivePackagePublishSource {
             get {
@@ -351,7 +350,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Show details... 的本地化字符串。
+        ///   查找类似 显示详情... 的本地化字符串。
         /// </summary>
         public static string Dialog_ShowDetails {
             get {
@@ -360,7 +359,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Signature: 的本地化字符串。
+        ///   查找类似 签名： 的本地化字符串。
         /// </summary>
         public static string Dialog_SignatureValidation {
             get {
@@ -369,7 +368,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Source Link: 的本地化字符串。
+        ///   查找类似 来源链接： 的本地化字符串。
         /// </summary>
         public static string Dialog_SourceLinkValidation {
             get {
@@ -378,7 +377,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Tags: 的本地化字符串。
+        ///   查找类似 标签： 的本地化字符串。
         /// </summary>
         public static string Dialog_TagLabel {
             get {
@@ -387,7 +386,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 NuGet Package Explorer 的本地化字符串。
+        ///   查找类似 NuGet 包浏览器 的本地化字符串。
         /// </summary>
         public static string Dialog_Title {
             get {
@@ -396,7 +395,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Title: 的本地化字符串。
+        ///   查找类似 标题： 的本地化字符串。
         /// </summary>
         public static string Dialog_TitleLabel {
             get {
@@ -405,7 +404,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Validation Results: 的本地化字符串。
+        ///   查找类似 验证结果： 的本地化字符串。
         /// </summary>
         public static string Dialog_ValidationResult {
             get {
@@ -414,7 +413,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Package Validation Results 的本地化字符串。
+        ///   查找类似 包验证结果： 的本地化字符串。
         /// </summary>
         public static string Dialog_ValidationResultTitle {
             get {
@@ -423,7 +422,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Version: 的本地化字符串。
+        ///   查找类似 版本： 的本地化字符串。
         /// </summary>
         public static string Dialog_VersionLabel {
             get {
@@ -432,7 +431,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 View License Terms 的本地化字符串。
+        ///   查找类似 查看许可证条款 的本地化字符串。
         /// </summary>
         public static string Dialog_ViewLicense {
             get {
@@ -441,7 +440,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Warnings 的本地化字符串。
+        ///   查找类似 警告 的本地化字符串。
         /// </summary>
         public static string Dialog_Warnings {
             get {

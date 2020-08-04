@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Dialog_CreatedByLabel" xml:space="preserve">
-    <value>作者:</value>
+    <value>作者：</value>
   </data>
   <data name="Dialog_DependenciesLabel" xml:space="preserve">
-    <value>依赖项:</value>
+    <value>依赖项：</value>
   </data>
   <data name="Dialog_DeterministicValidation" xml:space="preserve">
     <value>Deterministic (dll/exe):</value>
   </data>
   <data name="Dialog_DevelopmentDependencyLabel" xml:space="preserve">
-    <value>开发依赖项:</value>
+    <value>开发依赖项：</value>
   </data>
   <data name="Dialog_DownloadingPackage" xml:space="preserve">
     <value>正在下载包 {0} {1}</value>
@@ -136,117 +136,116 @@
     <value>错误</value>
   </data>
   <data name="Dialog_FrameworkAssembliesLabel" xml:space="preserve">
-    <value>框架程序集引用:</value>
+    <value>框架程序集引用：</value>
   </data>
   <data name="Dialog_HasCompilerFlags" xml:space="preserve">
-    <value>Compiler Flags:</value>
+    <value>编译器标记：</value>
   </data>
   <data name="Dialog_Health" xml:space="preserve">
-    <value>Health:</value>
+    <value>健壮性：</value>
   </data>
   <data name="Dialog_IdLabel" xml:space="preserve">
-    <value>Id:</value>
+    <value>包 Id：</value>
   </data>
   <data name="Dialog_Information" xml:space="preserve">
-    <value>Information</value>
+    <value>信息</value>
   </data>
   <data name="Dialog_InvalidPackageUrl" xml:space="preserve">
-    <value>The package URL {0} is invalid and can not be opened.</value>
+    <value>包 URL {0} 无效且无法打开。</value>
   </data>
   <data name="Dialog_LanguageLabel" xml:space="preserve">
-    <value>Language:</value>
+    <value>语言：</value>
   </data>
   <data name="Dialog_LicenceMeta" xml:space="preserve">
-    <value>License Meta:</value>
+    <value>许可证 Meta：</value>
   </data>
   <data name="Dialog_LicenseExpression" xml:space="preserve">
-    <value>Expression:</value>
+    <value>表达式：</value>
   </data>
   <data name="Dialog_LicenseExpressionVersion" xml:space="preserve">
-    <value>Expression Version:</value>
+    <value>表达式版本：</value>
   </data>
   <data name="Dialog_MinVersionLabel" xml:space="preserve">
-    <value>Min client version:</value>
+    <value>最小客户端版本：</value>
   </data>
   <data name="Dialog_MoreInfo" xml:space="preserve">
-    <value>Package Information</value>
+    <value>包信息</value>
   </data>
   <data name="Dialog_NoDependencyLabel" xml:space="preserve">
-    <value>No Dependencies</value>
+    <value>没有依赖项</value>
   </data>
   <data name="Dialog_OpenFileFilter" xml:space="preserve">
-    <value>All supported files|*.nupkg;*.snupkg;*.nuspec|NuGet package file (*.nupkg)|*.nupkg|NuGet Symbols package file (*.snupkg)|*.snupkg|NuSpec file (*.nuspec)|*.nuspec</value>
+    <value>所有支持的文件|*.nupkg;*.snupkg;*.nuspec|NuGet包文件 (*.nupkg)|*.nupkg|NuGet 符号包文件 (*.snupkg)|*.snupkg|NuSpec 文件 (*.nuspec)|*.nuspec</value>
   </data>
   <data name="Dialog_OwnersLabel" xml:space="preserve">
-    <value>Owners:</value>
+    <value>所有者：</value>
   </data>
   <data name="Dialog_PublisherLabel" xml:space="preserve">
-    <value>Publisher:</value>
+    <value>发布者：</value>
   </data>
   <data name="Dialog_ReportAbuse" xml:space="preserve">
-    <value>Report Abuse</value>
+    <value>报告滥用</value>
   </data>
   <data name="Dialog_RepositoryBranch" xml:space="preserve">
-    <value>Branch:</value>
+    <value>分支：</value>
   </data>
   <data name="Dialog_RepositoryCommit" xml:space="preserve">
-    <value>Commit:</value>
+    <value>提交：</value>
   </data>
   <data name="Dialog_RepositoryLabel" xml:space="preserve">
-    <value>Repository:</value>
+    <value>存储库：</value>
   </data>
   <data name="Dialog_RepositoryType" xml:space="preserve">
-    <value>Type:</value>
+    <value>类型：</value>
   </data>
   <data name="Dialog_RepositoryUrl" xml:space="preserve">
-    <value>Url:</value>
+    <value>Url：</value>
   </data>
   <data name="Dialog_RequireLicenseLabel" xml:space="preserve">
-    <value>Requires License Acceptance:</value>
+    <value>要求接收许可证：</value>
   </data>
   <data name="Dialog_SaveQuestion" xml:space="preserve">
-    <value>Do you want to save your changes?</value>
+    <value>你想保存更改吗？</value>
   </data>
   <data name="Dialog_ServiceableLabel" xml:space="preserve">
-    <value>Serviceable:</value>
+    <value>可用的：</value>
   </data>
   <data name="Dialog_SetActivePackagePublishSource" xml:space="preserve">
-    <value>The external url wants to add a publish source to NuGet Package Explorer.
-
-Do you want to add '{0}' to the list of package publish sources?</value>
+    <value>外部 Url 希望向 NuGet 包浏览器 添加发布源。
+是否要将 '{0}' 添加到包发布源列表中?</value>
   </data>
   <data name="Dialog_ShowDetails" xml:space="preserve">
-    <value>Show details...</value>
+    <value>显示详情...</value>
   </data>
   <data name="Dialog_SignatureValidation" xml:space="preserve">
-    <value>Signature:</value>
+    <value>签名：</value>
   </data>
   <data name="Dialog_SourceLinkValidation" xml:space="preserve">
-    <value>Source Link:</value>
+    <value>来源链接：</value>
   </data>
   <data name="Dialog_TagLabel" xml:space="preserve">
-    <value>Tags:</value>
+    <value>标签：</value>
   </data>
   <data name="Dialog_Title" xml:space="preserve">
-    <value>NuGet Package Explorer</value>
+    <value>NuGet 包浏览器</value>
   </data>
   <data name="Dialog_TitleLabel" xml:space="preserve">
-    <value>Title:</value>
+    <value>标题：</value>
   </data>
   <data name="Dialog_ValidationResult" xml:space="preserve">
-    <value>Validation Results:</value>
+    <value>验证结果：</value>
   </data>
   <data name="Dialog_ValidationResultTitle" xml:space="preserve">
-    <value>Package Validation Results</value>
+    <value>包验证结果：</value>
   </data>
   <data name="Dialog_VersionLabel" xml:space="preserve">
-    <value>Version:</value>
+    <value>版本：</value>
   </data>
   <data name="Dialog_ViewLicense" xml:space="preserve">
-    <value>View License Terms</value>
+    <value>查看许可证条款</value>
   </data>
   <data name="Dialog_Warnings" xml:space="preserve">
-    <value>Warnings</value>
+    <value>警告</value>
   </data>
   <data name="MoveContentFileToFolder" xml:space="preserve">
     <value>Do you want to add the file '{0}' to '{1}' folder instead?</value>
