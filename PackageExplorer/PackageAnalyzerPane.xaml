@@ -10,12 +10,12 @@
 				</Expander.Header>
 				<StackPanel>
 					<TextBlock TextWrapping="Wrap" Margin="3,3,0,0">
-						<Run Text="Description:" FontWeight="Bold" />
+						<Run Text="说明：" FontWeight="Bold" />
 						<Run Text="{Binding Description, Mode=OneTime}" />
 					</TextBlock>
 
 					<TextBlock TextWrapping="Wrap" Margin="3,3,0,0">
-						<Run Text="Solution:" FontWeight="Bold" />
+						<Run Text="解决方案：" FontWeight="Bold" />
 						<Run Text="{Binding Solution, Mode=OneTime}" />
 					</TextBlock>
 				</StackPanel>
@@ -34,12 +34,12 @@
 
 	<DockPanel>
 		<Border Padding="3" DockPanel.Dock="Top" Grid.Row="0" Background="#BCC7D8" BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}">
-			<self:GrayscaleButton HorizontalAlignment="Left" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="{Binding ViewPackageAnalysisCommand, Mode=OneWay}" ToolTip="Rerun package analysis">
+			<self:GrayscaleButton HorizontalAlignment="Left" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="{Binding ViewPackageAnalysisCommand, Mode=OneWay}" ToolTip="返回分析包">
                 <self:GrayscaleContentPresenter Content="{StaticResource RefreshIcon}" />
             </self:GrayscaleButton>
 		</Border>
 
-		<TextBlock Margin="8,10,5,3" DockPanel.Dock="Top" Text="{Binding PackageIssues.Count, Mode=OneWay, StringFormat='{}{0} issue(s) found.'}"></TextBlock>
+		<TextBlock Margin="8,10,5,3" DockPanel.Dock="Top" Text="{Binding PackageIssues.Count, Mode=OneWay, StringFormat='{} 发现 {0} 个问题。'}"></TextBlock>
 
 		<ScrollViewer Margin="5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 			<ItemsControl ItemsSource="{Binding PackageIssues, Mode=OneWay}" ItemTemplate="{StaticResource PackageIssueTemplate}"></ItemsControl>
