@@ -134,12 +134,12 @@ namespace PackageExplorerViewModel
             {
                 if (string.IsNullOrWhiteSpace(value) && !PackageTypes.Any(pt => string.Equals(pt.Name, "SymbolsPackage", StringComparison.OrdinalIgnoreCase)))
                 {
-                    const string message = "Authors is required.";
-                    SetError("Authors", message);
+                    const string message = "作者是必需的。";
+                    SetError("作者", message);
                     throw new ArgumentException(message);
                 }
 
-                SetError("Authors", null);
+                SetError("作者", null);
                 if (_authors != value)
                 {
                     _authors = value;
@@ -309,16 +309,16 @@ namespace PackageExplorerViewModel
                 {
                     if (string.IsNullOrWhiteSpace(value))
                     {
-                        throw new ArgumentException("Id is required.");
+                        throw new ArgumentException("包 Id 是必须的。");
                     }
                 }
                 catch (Exception ex)
                 {
-                    SetError("Id", ex.Message);
+                    SetError("包 Id", ex.Message);
                     throw;
                 }
 
-                SetError("Id", null);
+                SetError("包 Id", null);
                 if (_id != value)
                 {
                     _id = value;
@@ -334,12 +334,12 @@ namespace PackageExplorerViewModel
             {
                 if (value == null)
                 {
-                    const string message = "Version is required.";
-                    SetError("Version", message);
+                    const string message = "版本是必须的。";
+                    SetError("版本", message);
                     throw new ArgumentException(message);
                 }
 
-                SetError("Version", null);
+                SetError("版本", null);
                 if (_version != value)
                 {
                     _version = value;
@@ -472,12 +472,12 @@ namespace PackageExplorerViewModel
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    const string message = "Description is required.";
-                    SetError("Description", message);
+                    const string message = "说明是必须的。";
+                    SetError("说明", message);
                     throw new ArgumentException(message);
                 }
 
-                SetError("Description", null);
+                SetError("说明", null);
 
                 if (_description != value)
                 {
@@ -687,7 +687,7 @@ namespace PackageExplorerViewModel
             {
                 if (RequireLicenseAcceptance && LicenseUrl == null && LicenseMetadata == null)
                 {
-                    return "Enabling license acceptance requires a license url, expression, or file.";
+                    return "启用要求接受许可证 Url、表达式或文件。";
                 }
             }
 
