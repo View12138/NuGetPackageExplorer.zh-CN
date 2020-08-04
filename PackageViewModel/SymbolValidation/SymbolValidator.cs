@@ -435,7 +435,7 @@ namespace PackageExplorerViewModel
                 else if(filesWithPdb.Count == 0)
                 {
                     SourceLinkResult = SymbolValidationResult.NothingToValidate;
-                    SourceLinkErrorMessage = "No files found to validate";
+                    SourceLinkErrorMessage = "没有找到需要验证的文件";
                 }
                 else if(requireExternal)
                 {
@@ -456,7 +456,7 @@ namespace PackageExplorerViewModel
                 {                    
                     SourceLinkResult = SymbolValidationResult.NoSourceLink;
 
-                    sb.AppendLine($"Missing Source Link for:\n{string.Join("\n", noSourceLink.Select(p => p.Path)) }");
+                    sb.AppendLine($"缺失来源链接：\n{string.Join("\n", noSourceLink.Select(p => p.Path)) }");
                     found = true;
                 }
 
@@ -469,7 +469,7 @@ namespace PackageExplorerViewModel
 
                     foreach(var (file, errors) in sourceLinkErrors)
                     {
-                        sb.AppendLine($"Source Link errors for {file.Path}:\n{string.Join("\n", errors) }");
+                        sb.AppendLine($"来源链接错误 {file.Path}:\n{string.Join("\n", errors) }");
                     }                    
 
                     found = true;
@@ -484,10 +484,10 @@ namespace PackageExplorerViewModel
 
                     if(!pdbChecksumValid)
                     {
-                        sb.AppendLine("Some PDB's checksums do not match their PE files and are shown as missing.");
+                        sb.AppendLine("一些PDB的校验和不匹配他们的PE文件，显示为缺失。");
                     }
 
-                    sb.AppendLine($"Missing Symbols for:\n{string.Join("\n", noSymbols.Select(p => p.File.Path)) }");
+                    sb.AppendLine($"缺失符号：\n{string.Join("\n", noSymbols.Select(p => p.File.Path)) }");
                 }
 
                 SourceLinkErrorMessage = sb.ToString();
@@ -504,7 +504,7 @@ namespace PackageExplorerViewModel
             else if(SourceLinkResult == SymbolValidationResult.NoSymbols)
             {
                 DeterministicResult = DeterministicResult.NonDeterministic;
-                DeterministicErrorMessage = "Missing Symbols";
+                DeterministicErrorMessage = "缺失符号";
             }
             else if(nonDeterministic.Count > 0)
             {
