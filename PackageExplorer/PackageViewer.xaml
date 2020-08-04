@@ -38,7 +38,7 @@
             <self:PackageIconConverter x:Key="PackageIconConverter" />
 
             <DataTemplate DataType="{x:Type core:PackageDependency}">
-                <TextBlock ToolTip="Open this package from online feed.">
+                <TextBlock ToolTip="从在线源上打开这个包。">
                     <Hyperlink Command="Print" CommandParameter="{Binding Id, Mode=OneWay}">
                         <Run Text="{Binding Mode=OneWay, Converter={StaticResource PackageDependencyConverter}}"></Run>
                     </Hyperlink>
@@ -259,10 +259,10 @@
                         </Hyperlink>
                     </TextBlock>
                     <TextBlock Style="{StaticResource DetailMetadataValueStyle}">
-                        <Run Text="Owners: " /><Run Text="{Binding PackageOwners, Converter={StaticResource ListToStringConverter}, ConverterParameter=', ', Mode=OneWay}" />
+                        <Run Text="所有者：" /><Run Text="{Binding PackageOwners, Converter={StaticResource ListToStringConverter}, ConverterParameter=', ', Mode=OneWay}" />
                     </TextBlock>
                     <TextBlock Style="{StaticResource DetailMetadataValueStyle}">
-                        <Run Text="Service Index: " /><Hyperlink Command="GoToPage" CommandParameter="{Binding V3ServiceIndexUrl, Mode=OneWay}">
+                        <Run Text="服务索引：" /><Hyperlink Command="GoToPage" CommandParameter="{Binding V3ServiceIndexUrl, Mode=OneWay}">
                             <Run Text="{Binding V3ServiceIndexUrl, Mode=OneWay}" />
                         </Hyperlink>
                     </TextBlock>
@@ -395,17 +395,17 @@
             </DataTemplate>
 
             <ContextMenu x:Key="SharedContextMenu" DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}">
-                <MenuItem Header="_View Content" InputGestureText="Enter" Command="{Binding ViewCommand}" CommandParameter="{Binding}" FontWeight="SemiBold" />
-                <MenuItem Header="_Open in Windows shell..." InputGestureText="Shift+Enter"  Command="{Binding OpenCommand}" CommandParameter="{Binding}" />
-                <MenuItem Header="Open _with..." Command="{Binding OpenWithCommand}" CommandParameter="{Binding}" />
-                <MenuItem Header="_Save As..." Command="{Binding SaveCommand}" CommandParameter="{Binding}" Icon="{StaticResource SaveAsIcon}" />
-                <MenuItem Header="Copy" Command="Copy" Icon="{StaticResource CopyIcon}" />
+                <MenuItem Header="查看内容(_V)" InputGestureText="Enter" Command="{Binding ViewCommand}" CommandParameter="{Binding}" FontWeight="SemiBold" />
+                <MenuItem Header="通过 Windows shell 打开(_O)..." InputGestureText="Shift+Enter"  Command="{Binding OpenCommand}" CommandParameter="{Binding}" />
+                <MenuItem Header="打开方式(_W)..." Command="{Binding OpenWithCommand}" CommandParameter="{Binding}" />
+                <MenuItem Header="另存为(_S)..." Command="{Binding SaveCommand}" CommandParameter="{Binding}" Icon="{StaticResource SaveAsIcon}" />
+                <MenuItem Header="复制" Command="Copy" Icon="{StaticResource CopyIcon}" />
                 <Separator />
-                <MenuItem Header="_Edit" Command="{Binding EditCommand}" CommandParameter="{Binding}" />
+                <MenuItem Header="编辑(_E)" Command="{Binding EditCommand}" CommandParameter="{Binding}" />
                 <Separator />
-                <MenuItem Header="_Rename..." InputGestureText="F2" Command="{Binding RenameCommand}" CommandParameter="{Binding}" />
-                <MenuItem Header="Re_place with..." Command="{Binding ReplaceCommand}" CommandParameter="{Binding}" />
-                <self:GrayscaleMenuItem Header="_Delete" InputGestureText="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding}">
+                <MenuItem Header="重命名..." InputGestureText="F2" Command="{Binding RenameCommand}" CommandParameter="{Binding}" />
+                <MenuItem Header="替换为(_P)..." Command="{Binding ReplaceCommand}" CommandParameter="{Binding}" />
+                <self:GrayscaleMenuItem Header="删除(_D)" InputGestureText="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding}">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource RemoveIcon}" />
                     </self:GrayscaleMenuItem.Icon>
@@ -414,13 +414,13 @@
 
             <ContextMenu x:Key="FolderSharedContextMenu" Opened="PackageFolderContextMenu_Opened" DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}">
 
-                <self:GrayscaleMenuItem Header="Add .props file" Command="{Binding AddBuildFileCommand, Mode=OneWay}" CommandParameter=".props" Visibility="{Binding Path, Converter={StaticResource StringToVisibilityConverter}, ConverterParameter=build;build\\*}">
+                <self:GrayscaleMenuItem Header="添加 .props 文件" Command="{Binding AddBuildFileCommand, Mode=OneWay}" CommandParameter=".props" Visibility="{Binding Path, Converter={StaticResource StringToVisibilityConverter}, ConverterParameter=build;build\\*}">
                     <MenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource PropertyIcon}" />
                     </MenuItem.Icon>
                 </self:GrayscaleMenuItem>
 
-                <self:GrayscaleMenuItem Header="Add .targets file" Command="{Binding AddBuildFileCommand, Mode=OneWay}" CommandParameter=".targets" Visibility="{Binding Path, Converter={StaticResource StringToVisibilityConverter}, ConverterParameter=build;build\\*}">
+                <self:GrayscaleMenuItem Header="添加 .targets 文件" Command="{Binding AddBuildFileCommand, Mode=OneWay}" CommandParameter=".targets" Visibility="{Binding Path, Converter={StaticResource StringToVisibilityConverter}, ConverterParameter=build;build\\*}">
                     <MenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource PropertyIcon}" />
                     </MenuItem.Icon>
@@ -428,12 +428,12 @@
 
                 <Separator Visibility="{Binding Path, Converter={StaticResource StringToVisibilityConverter}, ConverterParameter=build;build\\*}" />
 
-                <MenuItem Header="Add _New File..." Command="{Binding AddNewFileCommand}" CommandParameter="{Binding}" Icon="{StaticResource NewItemIcon}" />
-                <MenuItem Header="_Add Existing File..." Command="{Binding AddContentFileCommand}" CommandParameter="{Binding}" Icon="{StaticResource AddItemIcon}" />
-                <MenuItem Header="Add Ne_w Folder" Command="{Binding AddNewFolderCommand}" CommandParameter="{Binding}" Icon="{StaticResource AddFolderIcon}" />
-                <MenuItem Header="Paste" Command="Paste" Icon="{StaticResource PasteIcon}" />
-                <MenuItem Header="_Rename..." InputGestureText="F2" Command="{Binding RenameCommand}" CommandParameter="{Binding}" Icon="{StaticResource RenameIcon}" />
-                <self:GrayscaleMenuItem Header="_Delete" InputGestureText="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding}">
+                <MenuItem Header="添加新文件(_N)..." Command="{Binding AddNewFileCommand}" CommandParameter="{Binding}" Icon="{StaticResource NewItemIcon}" />
+                <MenuItem Header="添加现有文件(_A)..." Command="{Binding AddContentFileCommand}" CommandParameter="{Binding}" Icon="{StaticResource AddItemIcon}" />
+                <MenuItem Header="添加新文件夹(_W)" Command="{Binding AddNewFolderCommand}" CommandParameter="{Binding}" Icon="{StaticResource AddFolderIcon}" />
+                <MenuItem Header="粘贴" Command="Paste" Icon="{StaticResource PasteIcon}" />
+                <MenuItem Header="重命名(_R)..." InputGestureText="F2" Command="{Binding RenameCommand}" CommandParameter="{Binding}" Icon="{StaticResource RenameIcon}" />
+                <self:GrayscaleMenuItem Header="删除(_D)" InputGestureText="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding}">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource RemoveIcon}" />
                     </self:GrayscaleMenuItem.Icon>
@@ -595,7 +595,7 @@
                         </TextBlock>
 
                         <!-- Copyright -->
-                        <TextBlock Text="Copyright:" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}" Visibility="{Binding Copyright, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="版权：" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}" Visibility="{Binding Copyright, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
 
                         <TextBlock Style="{StaticResource DetailDescriptionTextBoxStyle}" Text="{Binding Copyright, Converter={StaticResource NormalizeTextConverter}}" Visibility="{Binding Copyright, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
 
@@ -615,17 +615,17 @@
                         </StackPanel>
 
                         <!-- Summary -->
-                        <TextBlock Text="Summary:" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}" Visibility="{Binding Summary, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="概要：" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}" Visibility="{Binding Summary, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
 
                         <TextBlock Style="{StaticResource DetailDescriptionTextBoxStyle}" Text="{Binding Summary, Converter={StaticResource NormalizeTextConverter}}" Visibility="{Binding Summary, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
 
                         <!-- Description -->
-                        <TextBlock Text="Description:" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}"></TextBlock>
+                        <TextBlock Text="说明：" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}"></TextBlock>
 
                         <TextBlock Style="{StaticResource DetailDescriptionTextBoxStyle}" Text="{Binding Description, Converter={StaticResource NormalizeTextConverter}}"></TextBlock>
 
                         <!-- Release Notes -->
-                        <TextBlock Text="Release notes:" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}" Visibility="{Binding ReleaseNotes, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
+                        <TextBlock Text="发行说明：" Margin="0,3,0,0" Style="{StaticResource DetailMetadataLabelStyle}" Visibility="{Binding ReleaseNotes, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
 
                         <TextBlock Style="{StaticResource DetailDescriptionTextBoxStyle}" Text="{Binding ReleaseNotes, Converter={StaticResource NormalizeTextConverter}}" Visibility="{Binding ReleaseNotes, Converter={StaticResource NullToVisibilityConverter}}"></TextBlock>
 
@@ -655,13 +655,13 @@
                         </ItemsControl>
 
                         <!-- Framework Reference Groups -->
-                        <TextBlock Visibility="{Binding Items.Count, ElementName=FrameworkReferenceGroups, Converter={StaticResource countConverter}}" Text="Framework References:" Margin="0,5,0,0" Style="{StaticResource DetailMetadataLabelStyle}" />
+                        <TextBlock Visibility="{Binding Items.Count, ElementName=FrameworkReferenceGroups, Converter={StaticResource countConverter}}" Text="框架引用：" Margin="0,5,0,0" Style="{StaticResource DetailMetadataLabelStyle}" />
 
                         <ItemsControl x:Name="FrameworkReferenceGroups" Margin="25,5,0,0" ItemsSource="{Binding FrameworkReferenceGroups}">
                         </ItemsControl>
 
                         <!-- Package Assembly References -->
-                        <TextBlock Visibility="{Binding Items.Count, ElementName=PackageAssemblyReferences, Converter={StaticResource countConverter}}" Text="Filtered Assembly References:" Margin="0,5,0,0" Style="{StaticResource DetailMetadataLabelStyle}" />
+                        <TextBlock Visibility="{Binding Items.Count, ElementName=PackageAssemblyReferences, Converter={StaticResource countConverter}}" Text="筛选程序集引用：" Margin="0,5,0,0" Style="{StaticResource DetailMetadataLabelStyle}" />
 
                         <ItemsControl x:Name="PackageAssemblyReferences" Margin="25,5,0,0" ItemsSource="{Binding PackageAssemblyReferences, Converter={StaticResource ReferenceSetConverter}}">
                         </ItemsControl>
@@ -754,7 +754,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- package metadata -->
-        <HeaderedContentControl Grid.RowSpan="3" Margin="0,0,1,0" Padding="0" Header="Package metadata" FlowDirection="LeftToRight">
+        <HeaderedContentControl Grid.RowSpan="3" Margin="0,0,1,0" Padding="0" Header="包 Metadata" FlowDirection="LeftToRight">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -770,7 +770,7 @@
                             Margin="2,0,0,0" 
                             Padding="1,0,0,0"
                             Visibility="{Binding IsSignedOrInEditMetadataMode, Converter={StaticResource invertedBoolToVis}}"
-                            ToolTipService.ToolTip="Edit Metadata (Ctrl+K)"
+                            ToolTipService.ToolTip="编辑 Metadata (Ctrl+K)"
                             Content="{StaticResource EditManifestIcon}"
                             />                        
 
@@ -779,14 +779,14 @@
                             Command="{Binding EditMetadataSourceCommand, Mode=OneWay}"
                             Margin="1,0,0,0" 
                             Visibility="{Binding IsInEditMetadataMode, Converter={StaticResource invertedBoolToVis}}"
-                            ToolTipService.ToolTip="Edit Metadata Source"
+                            ToolTipService.ToolTip="编辑 Metadata 源"
                             Content="{StaticResource MarkupTagIcon}"
                             />
 
                         <Button 
                             Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
                             Margin="2,0,0,0"
-                            ToolTipService.ToolTip="Save"
+                            ToolTipService.ToolTip="保存"
                             Visibility="{Binding IsInEditMetadataMode, Converter={StaticResource boolToVis}}"
                             Command="{Binding ApplyEditCommand}"
                             Content="{StaticResource GreenCheckIcon}"
@@ -797,7 +797,7 @@
                         <Button 
                             Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
                             Margin="1,0,0,0"
-                            ToolTipService.ToolTip="Cancel (Esc)"
+                            ToolTipService.ToolTip="取消 (Esc)"
                             Visibility="{Binding IsInEditMetadataMode, Converter={StaticResource boolToVis}}"
                             Command="{Binding CancelEditCommand}"
                             Content="{StaticResource CancelIcon}"
@@ -815,7 +815,7 @@
         <GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" ShowsPreview="True" ResizeBehavior="PreviousAndNext" Width="4" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
         
         <!-- package content tree view -->
-        <HeaderedContentControl Margin="1,0,0,0" Padding="0" Grid.Column="2" Header="Package contents">
+        <HeaderedContentControl Margin="1,0,0,0" Padding="0" Grid.Column="2" Header="包内容">
             <DockPanel>
                 <!-- Toolbar for package content pane -->
                 <Border DockPanel.Dock="Top" Background="#BCC7D8" Padding="3" BorderBrush="{StaticResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderThickness="0,1,0,0">
@@ -824,14 +824,14 @@
                             Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
                             Command="{Binding ExpandAllCommand, Mode=OneWay}"
                             Margin="2,0,0,0"
-                            ToolTipService.ToolTip="Expand All"
+                            ToolTipService.ToolTip="全部展开"
                             Content="{StaticResource ExpandDownGroupIcon}" />
 
                         <Button
                             Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
                             Command="{Binding CollapseAllCommand, Mode=OneWay}"
                             Margin="1,0,0,0"
-                            ToolTipService.ToolTip="Collapse All"
+                            ToolTipService.ToolTip="全部折叠"
                             Content="{StaticResource CollapseUpGroupIcon}" />
                     </StackPanel>
                 </Border>
@@ -853,41 +853,41 @@
 
                     <TreeView.ContextMenu>
                         <ContextMenu DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}">
-                            <MenuItem Header="Add _New File..." Command="{Binding AddNewFileCommand}" CommandParameter="{Binding RootFolder, Mode=OneWay}" Icon="{StaticResource NewItemIcon}" />
-                            <MenuItem Header="_Add Existing File..." Command="{Binding AddContentFileCommand}" CommandParameter="{Binding RootFolder, Mode=OneWay}" Icon="{StaticResource AddItemIcon}" />
-                            <MenuItem Header="Add Ne_w Folder" Command="{Binding AddNewFolderCommand}" CommandParameter="{Binding RootFolder, Mode=OneWay}" Icon="{StaticResource AddFolderIcon}" />
+                            <MenuItem Header="添加新文件(_N)..." Command="{Binding AddNewFileCommand}" CommandParameter="{Binding RootFolder, Mode=OneWay}" Icon="{StaticResource NewItemIcon}" />
+                            <MenuItem Header="添加现有文件(_A)..." Command="{Binding AddContentFileCommand}" CommandParameter="{Binding RootFolder, Mode=OneWay}" Icon="{StaticResource AddItemIcon}" />
+                            <MenuItem Header="添加新文件夹(_W)" Command="{Binding AddNewFolderCommand}" CommandParameter="{Binding RootFolder, Mode=OneWay}" Icon="{StaticResource AddFolderIcon}" />
                             <Separator />
-                            <self:GrayscaleMenuItem Header="Add _Content Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="content">
+                            <self:GrayscaleMenuItem Header="添加 _Content 文件夹(_C)" Command="{Binding AddContentFolderCommand}" CommandParameter="content">
                                 <self:GrayscaleMenuItem.Icon>
                                     <self:GrayscaleContentPresenter Content="{StaticResource ContentFolderIcon}" />
                                 </self:GrayscaleMenuItem.Icon>
                             </self:GrayscaleMenuItem>
-                            <self:GrayscaleMenuItem Header="Add _Lib Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="lib">
+                            <self:GrayscaleMenuItem Header="添加 Lib 文件夹(_L)" Command="{Binding AddContentFolderCommand}" CommandParameter="lib">
                                 <self:GrayscaleMenuItem.Icon>
                                     <self:GrayscaleContentPresenter Content="{StaticResource LibFolderIcon}" />
                                 </self:GrayscaleMenuItem.Icon>
                             </self:GrayscaleMenuItem>
-                            <self:GrayscaleMenuItem Header="Add _Tools Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="tools">
+                            <self:GrayscaleMenuItem Header="添加 Tools 文件夹(_T)" Command="{Binding AddContentFolderCommand}" CommandParameter="tools">
                                 <self:GrayscaleMenuItem.Icon>
                                     <self:GrayscaleContentPresenter Content="{StaticResource ToolsFolderIcon}" />
                                 </self:GrayscaleMenuItem.Icon>
                             </self:GrayscaleMenuItem>
-                            <self:GrayscaleMenuItem Header="Add _Build Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="build">
+                            <self:GrayscaleMenuItem Header="添加 Build 文件夹(_B)" Command="{Binding AddContentFolderCommand}" CommandParameter="build">
                                 <self:GrayscaleMenuItem.Icon>
                                     <self:GrayscaleContentPresenter Content="{StaticResource BuildFolderIcon}" />
                                 </self:GrayscaleMenuItem.Icon>
                             </self:GrayscaleMenuItem>
-                            <self:GrayscaleMenuItem Header="Add Build_MultiTargeting Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="buildMultiTargeting">
+                            <self:GrayscaleMenuItem Header="添加 BuildMultiTargeting 文件夹(_M)" Command="{Binding AddContentFolderCommand}" CommandParameter="buildMultiTargeting">
                                 <self:GrayscaleMenuItem.Icon>
                                     <self:GrayscaleContentPresenter Content="{StaticResource BuildFolderIcon}" />
                                 </self:GrayscaleMenuItem.Icon>
                             </self:GrayscaleMenuItem>
-                            <self:GrayscaleMenuItem Header="Add BuildT_ransitive Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="buildTransitive">
+                            <self:GrayscaleMenuItem Header="添加 BuildTransitive 文件夹(_R)" Command="{Binding AddContentFolderCommand}" CommandParameter="buildTransitive">
                                 <self:GrayscaleMenuItem.Icon>
                                     <self:GrayscaleContentPresenter Content="{StaticResource BuildFolderIcon}" />
                                 </self:GrayscaleMenuItem.Icon>
                             </self:GrayscaleMenuItem>
-                            <self:GrayscaleMenuItem Header="Add _Src Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="src">
+                            <self:GrayscaleMenuItem Header="添加 Src 文件夹(_S)" Command="{Binding AddContentFolderCommand}" CommandParameter="src">
                                 <self:GrayscaleMenuItem.Icon>
                                     <self:GrayscaleContentPresenter Content="{StaticResource SourceFolderIcon}" />
                                 </self:GrayscaleMenuItem.Icon>
@@ -906,7 +906,7 @@
         <GridSplitter Grid.Column="2" Grid.Row="1" Visibility="{Binding ShowContentViewer, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" ResizeBehavior="PreviousAndNext" Height="4" Margin="0,-2,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" />
 
         <!-- content viewer -->
-        <HeaderedContentControl x:Name="FileContentContainer" Header="{Binding CurrentFileInfo.Name, TargetNullValue='Content Viewer'}" Grid.Row="2" Grid.Column="2" Visibility="{Binding ShowContentViewer, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" Padding="0" Margin="1,5,0,0" IsVisibleChanged="FileContentContainer_IsVisibleChanged"></HeaderedContentControl>
+        <HeaderedContentControl x:Name="FileContentContainer" Header="{Binding CurrentFileInfo.Name, TargetNullValue='内容查看器'}" Grid.Row="2" Grid.Column="2" Visibility="{Binding ShowContentViewer, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" Padding="0" Margin="1,5,0,0" IsVisibleChanged="FileContentContainer_IsVisibleChanged"></HeaderedContentControl>
 
         <Button HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="{Binding ViewContentCommand}" CommandParameter="Hide" Margin="0,8,4,0" Padding="3" Visibility="{Binding ShowContentViewer, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" Grid.Row="2" Grid.Column="2" ToolTipService.ToolTip="Close">
             <Path StrokeThickness="1" UseLayoutRounding="True" SnapsToDevicePixels="True" Stretch="Uniform" Height="8" Width="10" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}" Data="F1M0,0L2,0 5,3 8,0 10,0 6,4 10,8 8,8 5,5 2,8 0,8 4,4 0,0z" />
@@ -915,7 +915,7 @@
         <GridSplitter Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" ShowsPreview="True" ResizeBehavior="PreviousAndNext" Width="4" Visibility="{Binding ShowPackageAnalysis, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
         
         <!-- Package Analyzer pane -->
-        <HeaderedContentControl x:Name="PackageAnalyzerContainer" Header="Package Analysis" Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" Visibility="{Binding ShowPackageAnalysis, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" Padding="0" Margin="2,0,0,0" IsVisibleChanged="PackageAnalyzerContainer_IsVisibleChanged"></HeaderedContentControl>
+        <HeaderedContentControl x:Name="PackageAnalyzerContainer" Header="分析包" Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" Visibility="{Binding ShowPackageAnalysis, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" Padding="0" Margin="2,0,0,0" IsVisibleChanged="PackageAnalyzerContainer_IsVisibleChanged"></HeaderedContentControl>
 
         <!-- Close button for Package Analyzer -->
         <Button HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="{Binding ViewPackageAnalysisCommand}" CommandParameter="Hide" Margin="0,4,4,0" Padding="3" Grid.Row="0" Grid.Column="4" Visibility="{Binding ShowPackageAnalysis, Converter={StaticResource boolToVis}, FallbackValue=Collapsed}" ToolTipService.ToolTip="Close">
