@@ -18,12 +18,12 @@ namespace PackageExplorer
                 }
                 else
                 {
-                    return new ValidationResult(false, "Publish url must be an HTTP or HTTPS address.");
+                    return new ValidationResult(false, "发布 Url 必须是 HTTP 或 HTTPS 地址。");
                 }
             }
             else
             {
-                return new ValidationResult(false, "Invalid publish url.");
+                return new ValidationResult(false, "无效的发布 Url。");
             }
         }
     }
