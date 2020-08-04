@@ -80,7 +80,7 @@ namespace PackageExplorerViewModel
         [SuppressMessage(
             "Microsoft.Design",
             "CA1031:DoNotCatchGeneralExceptionTypes",
-            Justification = "We don't want plugin to crash the app.")]
+            Justification = "我们不想应用程序因插件而崩溃。")]
         private void ShowFile(PackageFile file)
         {
             object? content = null;
