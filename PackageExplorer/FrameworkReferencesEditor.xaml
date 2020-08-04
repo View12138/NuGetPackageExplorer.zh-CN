@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:self="clr-namespace:PackageExplorer" 
          xmlns:pack="clr-namespace:NuGet.Packaging;assembly=NuGet.Packaging"            
-        Title="Framework References Editor" 
+        Title="框架引用编辑器" 
         ShowInTaskbar="False"
         WindowStartupLocation="CenterOwner"
         FontSize="{Binding FontSize, Source={StaticResource Settings}, Mode=OneWay}" 
@@ -40,7 +40,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Groups label -->
-        <Label Content="_Groups" Target="ReferenceGroupList" FontWeight="SemiBold" />
+        <Label Content="分组(_G)" Target="ReferenceGroupList" FontWeight="SemiBold" />
 
         <!-- buttons to add/remove group -->
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
@@ -55,7 +55,7 @@
         </ListBox>
 
         <!-- Group details label -->
-        <Label Content="Group _details" FontWeight="SemiBold" Grid.Column="1" HorizontalAlignment="Center">
+        <Label Content="分组详情(_D)" FontWeight="SemiBold" Grid.Column="1" HorizontalAlignment="Center">
         </Label>
 
         <!-- group details -->
@@ -76,7 +76,7 @@
 
             <!-- target framework textbox -->
             <DockPanel Grid.ColumnSpan="2" LastChildFill="True">
-                <Label DockPanel.Dock="Left" Content="_Target framework" Target="TargetFrameworkBox" />
+                <Label DockPanel.Dock="Left" Content="目标框架(_T)" Target="TargetFrameworkBox" />
                 <TextBox x:Name="TargetFrameworkBox" Text="{Binding TargetFramework, Converter={StaticResource TargetFrameworkConverter}, UpdateSourceTrigger=LostFocus}" />
             </DockPanel>
 
@@ -97,7 +97,7 @@
 
                 <ListView.View>
                     <GridView AllowsColumnReorder="False">
-                        <GridViewColumn Header="Framework" DisplayMemberBinding="{Binding}" Width="180">
+                        <GridViewColumn Header="框架" DisplayMemberBinding="{Binding}" Width="180">
                         </GridViewColumn>
 
                         <GridViewColumn Width="80">
@@ -128,8 +128,8 @@
 
         <!-- OK and Cancel buttons -->
         <UniformGrid HorizontalAlignment="Right" Grid.Row="3" Grid.ColumnSpan="2" Rows="1" Columns="2">
-            <Button IsDefault="True" Content="OK" Margin="5,10,5,0" Click="OkButton_Click" Padding="15,2" />
-            <Button Content="Cancel" Command="{Binding CancelCommand, Mode=OneWay}" Click="CancelButton_Click" Margin="5,10,5,0" Padding="15,2" />
+            <Button IsDefault="True" Content="确认" Margin="5,10,5,0" Click="OkButton_Click" Padding="15,2" />
+            <Button Content="取消" Command="{Binding CancelCommand, Mode=OneWay}" Click="CancelButton_Click" Margin="5,10,5,0" Padding="15,2" />
         </UniformGrid>
     </Grid>
 </self:StandardDialog>
