@@ -124,7 +124,7 @@
     <value>依赖项：</value>
   </data>
   <data name="Dialog_DeterministicValidation" xml:space="preserve">
-    <value>已确定 (dll/exe):</value>
+    <value>已确定 (dll/exe)：</value>
   </data>
   <data name="Dialog_DevelopmentDependencyLabel" xml:space="preserve">
     <value>开发依赖项：</value>

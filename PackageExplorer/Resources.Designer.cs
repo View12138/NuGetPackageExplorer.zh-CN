@@ -79,7 +79,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 已确定 (dll/exe): 的本地化字符串。
+        ///   查找类似 已确定 (dll/exe)： 的本地化字符串。
         /// </summary>
         public static string Dialog_DeterministicValidation {
             get {
