@@ -124,7 +124,7 @@
     <value>依赖项：</value>
   </data>
   <data name="Dialog_DeterministicValidation" xml:space="preserve">
-    <value>Deterministic (dll/exe):</value>
+    <value>已确定 (dll/exe):</value>
   </data>
   <data name="Dialog_DevelopmentDependencyLabel" xml:space="preserve">
     <value>开发依赖项：</value>
@@ -208,7 +208,7 @@
     <value>你想保存更改吗？</value>
   </data>
   <data name="Dialog_ServiceableLabel" xml:space="preserve">
-    <value>可用的：</value>
+    <value>可用性：</value>
   </data>
   <data name="Dialog_SetActivePackagePublishSource" xml:space="preserve">
     <value>外部 Url 希望向 NuGet 包浏览器 添加发布源。
@@ -248,141 +248,141 @@
     <value>警告</value>
   </data>
   <data name="MoveContentFileToFolder" xml:space="preserve">
-    <value>Do you want to add the file '{0}' to '{1}' folder instead?</value>
+    <value>是否将文件 '{0}' 添加到 '{1}' 文件夹中？</value>
   </data>
   <data name="MoveContentFileToFolderExplanation" xml:space="preserve">
-    <value>NuGet does not do anything special with files at the package root. The extension of this file indicates that it is intended to be placed in the '{0}' folder. </value>
+    <value>NuGet 对包根目录下的文件不做任何特殊的操作。此文件的扩展名表明它将被到 '{0}' 文件夹中。</value>
   </data>
   <data name="NoFxDependencyGroup" xml:space="preserve">
-    <value>(not framework specific)</value>
+    <value>(没有特定的框架)</value>
   </data>
   <data name="NoNetworkConnection" xml:space="preserve">
-    <value>Network connection is not detected.</value>
+    <value>未检测到网络连接。</value>
   </data>
   <data name="PackageChooser_ActionDownload" xml:space="preserve">
-    <value>download</value>
+    <value>下载</value>
   </data>
   <data name="PackageChooser_ActionHideAllVersions" xml:space="preserve">
-    <value>hide all versions</value>
+    <value>隐藏所有版本</value>
   </data>
   <data name="PackageChooser_ActionOpen" xml:space="preserve">
-    <value>open</value>
+    <value>打开</value>
   </data>
   <data name="PackageChooser_ActionShowAllVersions" xml:space="preserve">
-    <value>show all versions</value>
+    <value>显示所有版本</value>
   </data>
   <data name="PackageChooser_AlternatePackage" xml:space="preserve">
-    <value>Alternate Package:</value>
+    <value>备用 Package：</value>
   </data>
   <data name="PackageChooser_ClearSearchButtonTooltip" xml:space="preserve">
-    <value>Clear search</value>
+    <value>清空搜索</value>
   </data>
   <data name="PackageChooser_ColumnHeaderDownloads" xml:space="preserve">
-    <value>Downloads</value>
+    <value>下载</value>
   </data>
   <data name="PackageChooser_ColumnHeaderPublished" xml:space="preserve">
-    <value>Published</value>
+    <value>已发布</value>
   </data>
   <data name="PackageChooser_ColumnHeaderVersion" xml:space="preserve">
-    <value>Version</value>
+    <value>版本</value>
   </data>
   <data name="PackageChooser_Deprecated" xml:space="preserve">
-    <value>Deprecated:</value>
+    <value>已弃用：</value>
   </data>
   <data name="PackageChooser_DetailAuthors" xml:space="preserve">
-    <value>Author(s):</value>
+    <value>作者：</value>
   </data>
   <data name="PackageChooser_DetailDatePublished" xml:space="preserve">
-    <value>Date published:</value>
+    <value>发布日期：</value>
   </data>
   <data name="PackageChooser_DetailDescription" xml:space="preserve">
-    <value>Description</value>
+    <value>描述</value>
   </data>
   <data name="PackageChooser_DetailLicense" xml:space="preserve">
-    <value>License:</value>
+    <value>许可证：</value>
   </data>
   <data name="PackageChooser_DetailProjectUrl" xml:space="preserve">
-    <value>Project URL:</value>
+    <value>项目 URL：</value>
   </data>
   <data name="PackageChooser_DetailReportAbuse" xml:space="preserve">
-    <value>Report Abuse:</value>
+    <value>报告滥用：</value>
   </data>
   <data name="PackageChooser_DetailTags" xml:space="preserve">
-    <value>Tags:</value>
+    <value>标签：</value>
   </data>
   <data name="PackageChooser_DetailVersion" xml:space="preserve">
-    <value>Version:</value>
+    <value>版本：</value>
   </data>
   <data name="PackageChooser_PackageSource" xml:space="preserve">
-    <value>_Package source:</value>
+    <value>包来源：</value>
   </data>
   <data name="PackageChooser_RefreshButtonTooltip" xml:space="preserve">
-    <value>Refresh</value>
+    <value>刷新</value>
   </data>
   <data name="PackageChooser_SearchBoxTooltip" xml:space="preserve">
-    <value>Search for package</value>
+    <value>搜索包</value>
   </data>
   <data name="PackageChooser_SearchBoxWatermark" xml:space="preserve">
-    <value>Search (Ctrl+E)</value>
+    <value>搜索 (Ctrl+E)</value>
   </data>
   <data name="PackageChooser_SearchButtonTooltip" xml:space="preserve">
-    <value>Search</value>
+    <value>搜索</value>
   </data>
   <data name="PackageChooser_ShowPreReleasePackages" xml:space="preserve">
-    <value>Show pre-release packages</value>
+    <value>显示预发布包</value>
   </data>
   <data name="PackageChooser_WindowTitle" xml:space="preserve">
-    <value>Select Package</value>
+    <value>选择包</value>
   </data>
   <data name="PackageContentsVerifyError" xml:space="preserve">
-    <value>Failed to download package correctly. The contents of the package could not be verified.</value>
+    <value>无法正确下载包。包内容无法验证。</value>
   </data>
   <data name="PackageHasNoFile" xml:space="preserve">
-    <value>There are no contents or dependencies in the package.</value>
+    <value>包中没有内容或依赖项。</value>
   </data>
   <data name="ProxyConnectToMessage" xml:space="preserve">
-    <value>Connect to {0}</value>
+    <value>连接到 {0}</value>
   </data>
   <data name="Validation_Disallowed" xml:space="preserve">
-    <value>Disallowed</value>
+    <value>不允许</value>
   </data>
   <data name="Validation_HasUntrackedSources" xml:space="preserve">
-    <value>Contains untracked sources (obj)</value>
+    <value>包含未跟踪的源 (obj)</value>
   </data>
   <data name="Validation_InvalidSourceLink" xml:space="preserve">
-    <value>Invalid Source Link</value>
+    <value>来源链接无效</value>
   </data>
   <data name="Validation_MissingCompilerFlags" xml:space="preserve">
-    <value>Missing</value>
+    <value>缺失</value>
   </data>
   <data name="Validation_MissingSourceLink" xml:space="preserve">
-    <value>Has Symbols, No Source Link</value>
+    <value>有符号，没有来源链接</value>
   </data>
   <data name="Validation_MissingSymbols" xml:space="preserve">
-    <value>Missing Symbols</value>
+    <value>缺失符号</value>
   </data>
   <data name="Validation_NonDeterministic" xml:space="preserve">
-    <value>Non deterministic</value>
+    <value>不确定</value>
   </data>
   <data name="Validation_NothingToValidate" xml:space="preserve">
-    <value>No files found to validate</value>
+    <value>没有找到需要验证的文件</value>
   </data>
   <data name="Validation_Pending" xml:space="preserve">
-    <value>Pending</value>
+    <value>确定中</value>
   </data>
   <data name="Validation_Present" xml:space="preserve">
-    <value>Present</value>
+    <value>存在</value>
   </data>
   <data name="Validation_Suspect" xml:space="preserve">
-    <value>Suspect</value>
+    <value>存疑</value>
   </data>
   <data name="Validation_Unknown" xml:space="preserve">
-    <value>Unknown</value>
+    <value>未知</value>
   </data>
   <data name="Validation_Valid" xml:space="preserve">
-    <value>Valid</value>
+    <value>有效</value>
   </data>
   <data name="Validation_ValidExternal" xml:space="preserve">
-    <value>Valid with Symbol Server</value>
+    <value>符号服务器有效</value>
   </data>
 </root>

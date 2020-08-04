@@ -79,7 +79,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Deterministic (dll/exe): 的本地化字符串。
+        ///   查找类似 已确定 (dll/exe): 的本地化字符串。
         /// </summary>
         public static string Dialog_DeterministicValidation {
             get {
@@ -331,7 +331,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 可用的： 的本地化字符串。
+        ///   查找类似 可用性： 的本地化字符串。
         /// </summary>
         public static string Dialog_ServiceableLabel {
             get {
@@ -449,7 +449,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Do you want to add the file &apos;{0}&apos; to &apos;{1}&apos; folder instead? 的本地化字符串。
+        ///   查找类似 是否将文件 &apos;{0}&apos; 添加到 &apos;{1}&apos; 文件夹中？ 的本地化字符串。
         /// </summary>
         public static string MoveContentFileToFolder {
             get {
@@ -458,7 +458,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 NuGet does not do anything special with files at the package root. The extension of this file indicates that it is intended to be placed in the &apos;{0}&apos; folder.  的本地化字符串。
+        ///   查找类似 NuGet 对包根目录下的文件不做任何特殊的操作。此文件的扩展名表明它将被到 &apos;{0}&apos; 文件夹中。 的本地化字符串。
         /// </summary>
         public static string MoveContentFileToFolderExplanation {
             get {
@@ -467,7 +467,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 (not framework specific) 的本地化字符串。
+        ///   查找类似 (没有特定的框架) 的本地化字符串。
         /// </summary>
         public static string NoFxDependencyGroup {
             get {
@@ -476,7 +476,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Network connection is not detected. 的本地化字符串。
+        ///   查找类似 未检测到网络连接。 的本地化字符串。
         /// </summary>
         public static string NoNetworkConnection {
             get {
@@ -485,7 +485,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 download 的本地化字符串。
+        ///   查找类似 下载 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ActionDownload {
             get {
@@ -494,7 +494,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 hide all versions 的本地化字符串。
+        ///   查找类似 隐藏所有版本 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ActionHideAllVersions {
             get {
@@ -503,7 +503,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 open 的本地化字符串。
+        ///   查找类似 打开 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ActionOpen {
             get {
@@ -512,7 +512,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 show all versions 的本地化字符串。
+        ///   查找类似 显示所有版本 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ActionShowAllVersions {
             get {
@@ -521,7 +521,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Alternate Package: 的本地化字符串。
+        ///   查找类似 备用 Package： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_AlternatePackage {
             get {
@@ -530,7 +530,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Clear search 的本地化字符串。
+        ///   查找类似 清空搜索 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ClearSearchButtonTooltip {
             get {
@@ -539,7 +539,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Downloads 的本地化字符串。
+        ///   查找类似 下载 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ColumnHeaderDownloads {
             get {
@@ -548,7 +548,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Published 的本地化字符串。
+        ///   查找类似 已发布 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ColumnHeaderPublished {
             get {
@@ -557,7 +557,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Version 的本地化字符串。
+        ///   查找类似 版本 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ColumnHeaderVersion {
             get {
@@ -566,7 +566,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Deprecated: 的本地化字符串。
+        ///   查找类似 已弃用： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_Deprecated {
             get {
@@ -575,7 +575,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Author(s): 的本地化字符串。
+        ///   查找类似 作者： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailAuthors {
             get {
@@ -584,7 +584,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Date published: 的本地化字符串。
+        ///   查找类似 发布日期： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailDatePublished {
             get {
@@ -593,7 +593,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Description 的本地化字符串。
+        ///   查找类似 描述 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailDescription {
             get {
@@ -602,7 +602,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 License: 的本地化字符串。
+        ///   查找类似 许可证： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailLicense {
             get {
@@ -611,7 +611,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Project URL: 的本地化字符串。
+        ///   查找类似 项目 URL： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailProjectUrl {
             get {
@@ -620,7 +620,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Report Abuse: 的本地化字符串。
+        ///   查找类似 报告滥用： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailReportAbuse {
             get {
@@ -629,7 +629,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Tags: 的本地化字符串。
+        ///   查找类似 标签： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailTags {
             get {
@@ -638,7 +638,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Version: 的本地化字符串。
+        ///   查找类似 版本： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_DetailVersion {
             get {
@@ -647,7 +647,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 _Package source: 的本地化字符串。
+        ///   查找类似 包来源： 的本地化字符串。
         /// </summary>
         public static string PackageChooser_PackageSource {
             get {
@@ -656,7 +656,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Refresh 的本地化字符串。
+        ///   查找类似 刷新 的本地化字符串。
         /// </summary>
         public static string PackageChooser_RefreshButtonTooltip {
             get {
@@ -665,7 +665,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Search for package 的本地化字符串。
+        ///   查找类似 搜索包 的本地化字符串。
         /// </summary>
         public static string PackageChooser_SearchBoxTooltip {
             get {
@@ -674,7 +674,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Search (Ctrl+E) 的本地化字符串。
+        ///   查找类似 搜索 (Ctrl+E) 的本地化字符串。
         /// </summary>
         public static string PackageChooser_SearchBoxWatermark {
             get {
@@ -683,7 +683,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Search 的本地化字符串。
+        ///   查找类似 搜索 的本地化字符串。
         /// </summary>
         public static string PackageChooser_SearchButtonTooltip {
             get {
@@ -692,7 +692,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Show pre-release packages 的本地化字符串。
+        ///   查找类似 显示预发布包 的本地化字符串。
         /// </summary>
         public static string PackageChooser_ShowPreReleasePackages {
             get {
@@ -701,7 +701,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Select Package 的本地化字符串。
+        ///   查找类似 选择包 的本地化字符串。
         /// </summary>
         public static string PackageChooser_WindowTitle {
             get {
@@ -710,7 +710,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Failed to download package correctly. The contents of the package could not be verified. 的本地化字符串。
+        ///   查找类似 无法正确下载包。包内容无法验证。 的本地化字符串。
         /// </summary>
         public static string PackageContentsVerifyError {
             get {
@@ -719,7 +719,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 There are no contents or dependencies in the package. 的本地化字符串。
+        ///   查找类似 包中没有内容或依赖项。 的本地化字符串。
         /// </summary>
         public static string PackageHasNoFile {
             get {
@@ -728,7 +728,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Connect to {0} 的本地化字符串。
+        ///   查找类似 连接到 {0} 的本地化字符串。
         /// </summary>
         public static string ProxyConnectToMessage {
             get {
@@ -737,7 +737,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Disallowed 的本地化字符串。
+        ///   查找类似 不允许 的本地化字符串。
         /// </summary>
         public static string Validation_Disallowed {
             get {
@@ -746,7 +746,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Contains untracked sources (obj) 的本地化字符串。
+        ///   查找类似 包含未跟踪的源 (obj) 的本地化字符串。
         /// </summary>
         public static string Validation_HasUntrackedSources {
             get {
@@ -755,7 +755,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Invalid Source Link 的本地化字符串。
+        ///   查找类似 来源链接无效 的本地化字符串。
         /// </summary>
         public static string Validation_InvalidSourceLink {
             get {
@@ -764,7 +764,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Missing 的本地化字符串。
+        ///   查找类似 缺失 的本地化字符串。
         /// </summary>
         public static string Validation_MissingCompilerFlags {
             get {
@@ -773,7 +773,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Has Symbols, No Source Link 的本地化字符串。
+        ///   查找类似 有符号，没有来源链接 的本地化字符串。
         /// </summary>
         public static string Validation_MissingSourceLink {
             get {
@@ -782,7 +782,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Missing Symbols 的本地化字符串。
+        ///   查找类似 缺失符号 的本地化字符串。
         /// </summary>
         public static string Validation_MissingSymbols {
             get {
@@ -791,7 +791,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Non deterministic 的本地化字符串。
+        ///   查找类似 不确定 的本地化字符串。
         /// </summary>
         public static string Validation_NonDeterministic {
             get {
@@ -800,7 +800,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 No files found to validate 的本地化字符串。
+        ///   查找类似 没有找到需要验证的文件 的本地化字符串。
         /// </summary>
         public static string Validation_NothingToValidate {
             get {
@@ -809,7 +809,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Pending 的本地化字符串。
+        ///   查找类似 确定中 的本地化字符串。
         /// </summary>
         public static string Validation_Pending {
             get {
@@ -818,7 +818,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Present 的本地化字符串。
+        ///   查找类似 存在 的本地化字符串。
         /// </summary>
         public static string Validation_Present {
             get {
@@ -827,7 +827,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Suspect 的本地化字符串。
+        ///   查找类似 存疑 的本地化字符串。
         /// </summary>
         public static string Validation_Suspect {
             get {
@@ -836,7 +836,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Unknown 的本地化字符串。
+        ///   查找类似 未知 的本地化字符串。
         /// </summary>
         public static string Validation_Unknown {
             get {
@@ -845,7 +845,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Valid 的本地化字符串。
+        ///   查找类似 有效 的本地化字符串。
         /// </summary>
         public static string Validation_Valid {
             get {
@@ -854,7 +854,7 @@ namespace PackageExplorer {
         }
         
         /// <summary>
-        ///   查找类似 Valid with Symbol Server 的本地化字符串。
+        ///   查找类似 符号服务器有效 的本地化字符串。
         /// </summary>
         public static string Validation_ValidExternal {
             get {
