@@ -39,12 +39,12 @@
 					DockPanel.Dock="Right" 
 					DataContext="{Binding DataContext, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:MainWindow}}}">
 					<Hyperlink Command="{Binding EditFileCommand, Mode=OneWay}" CommandParameter="{Binding CurrentFileInfo.File}">
-						<Run Text="Edit" />
+						<Run Text="编辑" />
 					</Hyperlink>
 				</TextBlock>
 				<TextBlock DockPanel.Dock="Left" Text="{Binding Size, Converter={StaticResource FileSizeConverter}, StringFormat='Size: {0}'}" Margin="3,0" VerticalAlignment="Center"></TextBlock>
 				<StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right" Orientation="Horizontal" Visibility="{Binding IsTextFile, Converter={StaticResource boolToVis}, ConverterParameter='hidden'}">
-					<Label Content="S_yntax scheme:" Target="{Binding ElementName=LanguageBox}" />
+					<Label Content="语法方案：" Target="{Binding ElementName=LanguageBox}" />
 					<ComboBox x:Name="LanguageBox" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Width="150" />
 				</StackPanel>
 			</DockPanel>
@@ -54,30 +54,30 @@
                 Padding="3">
             <DockPanel>
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
-                    <TextBlock Text="Valid:" Margin="0,0,2,0" VerticalAlignment="Center"/>
+                    <TextBlock Text="有效：" Margin="0,0,2,0" VerticalAlignment="Center"/>
                     <ContentControl x:Name="icon" Height="16" Width="16" VerticalAlignment="Center">
                         <ContentControl.Style>
                             <Style TargetType="ContentControl">
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding SignatureStatus}" Value="Valid">
                                         <Setter Property="Content" Value="{StaticResource StatusSecurityOkIcon}" />
-                                        <Setter Property="ToolTip" Value="The signature is valid and trusted."/>
+                                        <Setter Property="ToolTip" Value="签名有效且可信。"/>
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding SignatureStatus}" Value="BadDigest">
                                         <Setter Property="Content" Value="{StaticResource StatusSecurityCriticalIcon}" />
-                                        <Setter Property="ToolTip" Value="The file is signed, however the signed hash does not match the computed hash."/>
+                                        <Setter Property="ToolTip" Value="文件是有签名的，但是签名哈希与计算哈希不匹配。"/>
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding SignatureStatus}" Value="ExplicitDistrust">
                                         <Setter Property="Content" Value="{StaticResource StatusSecurityCriticalIcon}" />
-                                        <Setter Property="ToolTip" Value="The file is signed, however is explicitly distrusted on this system."/>
+                                        <Setter Property="ToolTip" Value="该文件已签名，但在此系统上明确不可信。"/>
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding SignatureStatus}" Value="UntrustedRoot">
                                         <Setter Property="Content" Value="{StaticResource StatusSecurityWarningIcon}" />
-                                        <Setter Property="ToolTip" Value="The file is signed with an untrusted certificate."/>
+                                        <Setter Property="ToolTip" Value="文件是用不受信任的证书签名的。"/>
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding SignatureStatus}" Value="UnknownProvider">
                                         <Setter Property="Content" Value="{StaticResource StatusSecurityWarningIcon}" />
-                                        <Setter Property="ToolTip" Value="The file has a signature, but a provider could not be found to verify its authenticity."/>
+                                        <Setter Property="ToolTip" Value="文件有一个签名，但是找不到提供者来验证它的真实性。"/>
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
@@ -91,14 +91,14 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="authenticode:AuthenticodeSignature">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Publisher Info:" FontWeight="Bold"/>
+                                <TextBlock Text="发布者信息：" FontWeight="Bold"/>
                                 <TextBlock Margin="2,0,0,0">
                                     <Run Text="Url: " /><Hyperlink Command="GoToPage" CommandParameter="{Binding PublisherInformation.UrlLink, Mode=OneWay}">
                                         <Run Text="{Binding PublisherInformation.UrlLink, Mode=OneWay}" />
                                     </Hyperlink>
                                 </TextBlock>
                                 <TextBlock Margin="5,0,0,0">
-                                    <Run Text="Description: " /><Run Text="{Binding PublisherInformation.Description, Mode=OneWay}"/>
+                                    <Run Text="说明：" /><Run Text="{Binding PublisherInformation.Description, Mode=OneWay}"/>
                                 </TextBlock>
                             </StackPanel>
                         </DataTemplate>
