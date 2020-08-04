@@ -18,14 +18,14 @@
     <DockPanel LastChildFill="true">
 
         <Border DockPanel.Dock="Bottom" Margin="0,30,0,0" BorderThickness="0,0.5,0,0" BorderBrush="{DynamicResource ResourceKey={x:Static SystemColors.ActiveBorderBrushKey}}" Background="{DynamicResource ResourceKey={x:Static SystemColors.ControlBrushKey}}">
-            <Button Content="OK" Padding="20,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10,15,10" IsDefault="True" IsCancel="True" Click="Button_Click" />
+            <Button Content="确定" Padding="20,0,20,0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,10,15,10" IsDefault="True" IsCancel="True" Click="Button_Click" />
         </Border>
 
         <ContentPresenter Height="32" Width="32" Margin="15,20,0,0" DockPanel.Dock="Left" VerticalAlignment="Top" Content="{StaticResource NuGetPackageIcon}" />
 
         <StackPanel Orientation="Vertical" Grid.Column="1" Margin="15,20,15,0">
             <TextBox x:Name="ProductTitle"
-                     Text="NuGet Package Explorer"
+                     Text="NuGet Package Explorer (NuGet 包浏览器)"
                      FontWeight="Bold"
                      Style="{StaticResource SelectableTextBlockLikeStyle}"
                      />
@@ -38,23 +38,27 @@
             </TextBlock>
 
             <TextBlock Margin="0,5,0,0">
-				<Run Text="Original Author: " /><Hyperlink NavigateUri="https://twitter.com/dotnetjunky" Click="Hyperlink_Click"><Run Text="Luan Nguyen" /></Hyperlink>
+				<Run Text="原作者：" /><Hyperlink NavigateUri="https://twitter.com/dotnetjunky" Click="Hyperlink_Click"><Run Text="Luan Nguyen" /></Hyperlink>
             </TextBlock>
             <TextBlock Margin="0,5,0,0">
-                <Run Text="Maintainers: " />
-                <Hyperlink NavigateUri="https://github.com/304NotModified" Click="Hyperlink_Click"><Run Text="Julian Verdurmen" /></Hyperlink><Run Text=", "/>
-                <Hyperlink NavigateUri="https://twitter.com/clairernovotny" Click="Hyperlink_Click"><Run Text="Claire Novotny" /></Hyperlink><Run Text=", "/>
-                <Hyperlink NavigateUri="https://github.com/campersau" Click="Hyperlink_Click"><Run Text="Bastian Buchholz" /></Hyperlink><Run Text=", "/>
+                <Run Text="维护人员：" />
+                <Hyperlink NavigateUri="https://github.com/304NotModified" Click="Hyperlink_Click"><Run Text="Julian Verdurmen" /></Hyperlink><Run Text="，"/>
+                <Hyperlink NavigateUri="https://twitter.com/clairernovotny" Click="Hyperlink_Click"><Run Text="Claire Novotny" /></Hyperlink><Run Text="，"/>
+                <Hyperlink NavigateUri="https://github.com/campersau" Click="Hyperlink_Click"><Run Text="Bastian Buchholz" /></Hyperlink><Run Text="，"/>
                 <Hyperlink NavigateUri="https://twitter.com/dsplaisted" Click="Hyperlink_Click"><Run Text="Daniel Plaisted" /></Hyperlink>
             </TextBlock>
             <TextBlock Margin="0,5,0,0">
-				<Run Text="Text editor powered by " /><Hyperlink NavigateUri="https://github.com/icsharpcode/SharpDevelop/wiki/AvalonEdit" Click="Hyperlink_Click"><Run Text="AvalonEdit control" /></Hyperlink><Run Text="." />
+				<Run Text="文本编辑器基于 " /><Hyperlink NavigateUri="https://github.com/icsharpcode/SharpDevelop/wiki/AvalonEdit" Click="Hyperlink_Click"><Run Text="AvalonEdit control" /></Hyperlink><Run Text="。" />
             </TextBlock>
             <TextBlock Margin="0,5,0,0">
-				<Run Text="Some dialogs are provided by " /><Hyperlink NavigateUri="http://www.ookii.org/software/dialogs/" Click="Hyperlink_Click"><Run Text="Ookii.Dialogs" /></Hyperlink><Run Text="." />
+				<Run Text="一些对话框由 " /><Hyperlink NavigateUri="http://www.ookii.org/software/dialogs/" Click="Hyperlink_Click"><Run Text="Ookii.Dialogs" /></Hyperlink><Run Text="提供。" />
             </TextBlock>
             <TextBlock Margin="0,5,0,0">
-				<Run Text="Some dates are formatted by " /><Hyperlink NavigateUri="https://github.com/Humanizr/Humanizer" Click="Hyperlink_Click"><Run Text="Humanizer" /></Hyperlink><Run Text="." />
+				<Run Text="一些日期由 " /><Hyperlink NavigateUri="https://github.com/Humanizr/Humanizer" Click="Hyperlink_Click"><Run Text="Humanizer" /></Hyperlink><Run Text="格式化。" />
+            </TextBlock>
+            <TextBlock Margin="0,5,0,0">
+				<Run Text="中文版：" />
+                <Hyperlink NavigateUri="https://github.com/View12138" Click="Hyperlink_Click"><Run Text="View12138" /></Hyperlink><Run Text=""/>
             </TextBlock>
         </StackPanel>
     </DockPanel>
