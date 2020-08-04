@@ -7,17 +7,17 @@
 
     <DockPanel>
         <Menu DockPanel.Dock="Top" Background="{StaticResource MenuBackgroundBrush}">
-            <MenuItem Header="_File" Margin="3,0">
-                <self:GrayscaleMenuItem Header="_Save" Command="{Binding SaveCommand, Mode=OneWay}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:FileEditor}}}">
+            <MenuItem Header="文件(_F)" Margin="3,0">
+                <self:GrayscaleMenuItem Header="保存(_S)" Command="{Binding SaveCommand, Mode=OneWay}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:FileEditor}}}">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource SaveIcon}" />
                     </self:GrayscaleMenuItem.Icon>
                 </self:GrayscaleMenuItem>
                 <Separator />
-                <MenuItem Header="_Return to Package" Command="{Binding CloseCommand, Mode=OneWay}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:FileEditor}}}" />
+                <MenuItem Header="返回包(_R)" Command="{Binding CloseCommand, Mode=OneWay}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:FileEditor}}}" />
             </MenuItem>
 
-            <self:GrayscaleMenuItem Margin="3,0" Header="_Edit" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
+            <self:GrayscaleMenuItem Margin="3,0" Header="编辑(_E)" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
                 <self:GrayscaleMenuItem Command="Undo">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource UndoIcon}" />
@@ -52,24 +52,24 @@
                 </self:GrayscaleMenuItem>
             </self:GrayscaleMenuItem>
 
-            <MenuItem Header="_View" Margin="3,0">
-                <MenuItem Header="Text _Size" x:Name="FontSizeMenuItem">
+            <MenuItem Header="视图(_V)" Margin="3,0">
+                <MenuItem Header="字体大小(_S)" x:Name="FontSizeMenuItem">
                     <MenuItem.Icon>
                         <ContentPresenter Content="{StaticResource FontSizeIcon}" />
                     </MenuItem.Icon>
-                    <self:GrayscaleMenuItem Header="_Normal" Tag="12" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=12, Mode=OneWay}" />
-                    <self:GrayscaleMenuItem Header="_Medium" Tag="14" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=14, Mode=OneWay}" />
-                    <self:GrayscaleMenuItem Header="L_arge" Tag="16" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=16, Mode=OneWay}" />
-                    <self:GrayscaleMenuItem Header="E_xtra Large" Tag="18" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=18, Mode=OneWay}" />
+                    <self:GrayscaleMenuItem Header="正常(_N)" Tag="12" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=12, Mode=OneWay}" />
+                    <self:GrayscaleMenuItem Header="中等(_M)" Tag="14" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=14, Mode=OneWay}" />
+                    <self:GrayscaleMenuItem Header="大(_A)" Tag="16" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=16, Mode=OneWay}" />
+                    <self:GrayscaleMenuItem Header="特大(_X)" Tag="18" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=18, Mode=OneWay}" />
                 </MenuItem>
 
-                <MenuItem Header="_Word Wrap" IsCheckable="True" IsChecked="{Binding WordWrap, Source={StaticResource Settings}, Mode=TwoWay}" />
-                <MenuItem Header="Show _Line Numbers" IsCheckable="True" IsChecked="{Binding ShowLineNumbers, Source={StaticResource Settings}, Mode=TwoWay}" />
+                <MenuItem Header="文本换行(_W)" IsCheckable="True" IsChecked="{Binding WordWrap, Source={StaticResource Settings}, Mode=TwoWay}" />
+                <MenuItem Header="显示行号(_L)" IsCheckable="True" IsChecked="{Binding ShowLineNumbers, Source={StaticResource Settings}, Mode=TwoWay}" />
             </MenuItem>
 
-            <MenuItem Header="_Help" Margin="3,0">
-                <MenuItem Header="Open B_ug..." Command="GoToPage" CommandParameter="https://github.com/NuGetPackageExplorer/NuGetPackageExplorer/issues/new" />
-                <MenuItem Header="A_bout..." Command="Help" />
+            <MenuItem Header="帮助(_H)" Margin="3,0">
+                <MenuItem Header="报告 B_ug..." Command="GoToPage" CommandParameter="https://github.com/NuGetPackageExplorer/NuGetPackageExplorer/issues/new" />
+                <MenuItem Header="关于(_B)..." Command="Help" />
             </MenuItem>
         </Menu>
         
@@ -77,55 +77,55 @@
         <Border Background="{StaticResource ToolBarTrayBackground}" DockPanel.Dock="Top">
             <ToolBar ToolBarTray.IsLocked="True" Margin="1">            
                 <!-- Return to Package -->
-                <Button ToolTip="Return to Package (Ctrl+F4)"
+                <Button ToolTip="返回包 (Ctrl+F4)"
                         Command="{Binding CloseCommand, Mode=OneWay}"
                         CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:FileEditor}}}"
                         Content="{StaticResource BackwardIcon}"
                         />
 
                 <!-- Save -->
-                <self:GrayscaleButton ToolTip="Save (Ctrl+S)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="{Binding SaveCommand, Mode=OneWay}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:FileEditor}}}">
+                <self:GrayscaleButton ToolTip="保存 (Ctrl+S)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="{Binding SaveCommand, Mode=OneWay}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type self:FileEditor}}}">
                     <self:GrayscaleContentPresenter Content="{StaticResource SaveIcon}" />
                 </self:GrayscaleButton>
 
                 <Separator />
 
                 <!-- Cut -->
-                <self:GrayscaleButton ToolTip="Cut (Ctrl+X)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Cut">
+                <self:GrayscaleButton ToolTip="剪切 (Ctrl+X)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Cut">
                     <self:GrayscaleContentPresenter Content="{StaticResource CutIcon}" />
                 </self:GrayscaleButton>
 
                 <!-- Copy -->
-                <self:GrayscaleButton ToolTip="Copy (Ctrl+C)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Copy">
+                <self:GrayscaleButton ToolTip="复制 (Ctrl+C)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Copy">
                     <self:GrayscaleContentPresenter Content="{StaticResource CopyIcon}" />
                 </self:GrayscaleButton>
 
                 <!-- Paste -->
-                <self:GrayscaleButton ToolTip="Paste (Ctrl+V)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Paste">
+                <self:GrayscaleButton ToolTip="粘贴 (Ctrl+V)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Paste">
                     <self:GrayscaleContentPresenter Content="{StaticResource PasteIcon}" />
                 </self:GrayscaleButton>
 
                 <Separator />
 
                 <!-- Undo -->
-                <self:GrayscaleButton ToolTip="Undo (Ctrl+Z)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Undo">
+                <self:GrayscaleButton ToolTip="撤销 (Ctrl+Z)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Undo">
                     <self:GrayscaleContentPresenter Content="{StaticResource UndoIcon}" />
                 </self:GrayscaleButton>
 
                 <!-- Redo -->
-                <self:GrayscaleButton ToolTip="Redo (Ctrl+Y)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Redo">
+                <self:GrayscaleButton ToolTip="重做 (Ctrl+Y)" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Command="Redo">
                     <self:GrayscaleContentPresenter Content="{StaticResource RedoIcon}" />
                 </self:GrayscaleButton>
 
                 <Separator />
 
-                <Label Content="Synt_ax Scheme:" Target="SyntaxDefinitions" />
+                <Label Content="语法方案(_A)：" Target="SyntaxDefinitions" />
 
                 <ComboBox x:Name="SyntaxDefinitions" IsEditable="false" IsReadOnly="true" Width="110" DisplayMemberPath="Name"></ComboBox>
 
                 <Separator />
 
-                <Label Content="F_ont: " Target="FontChoice" />
+                <Label Content="字体(_O)： " Target="FontChoice" />
 
                 <ComboBox x:Name="FontChoice" IsEditable="false" IsReadOnly="True" Height="{Binding ActualHeight, ElementName=SyntaxDefinitions}" Width="150">
                     <ComboBox.Resources>
