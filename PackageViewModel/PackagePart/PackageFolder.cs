@@ -371,7 +371,7 @@ namespace PackageExplorerViewModel
 
         internal void ReplaceFile(PackageFile oldFile)
         {
-            var result = PackageViewModel.UIServices.OpenFileDialog("Select New File", "All files (*.*)|*.*",
+            var result = PackageViewModel.UIServices.OpenFileDialog("选择新文件", "所有文件 (*.*)|*.*",
                                                                      out var selectedFileName);
             if (result)
             {
