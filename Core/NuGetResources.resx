@@ -112,114 +112,114 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Manifest_DependencyIdRequired" xml:space="preserve">
-    <value>Dependency Id is required.</value>
+    <value>需要依赖项 Id。</value>
   </data>
   <data name="Manifest_RequiredMetadataMissing" xml:space="preserve">
-    <value>{0} is required.</value>
+    <value>{0} 是必须的。</value>
   </data>
   <data name="Manifest_RequireLicenseAcceptanceRequiresLicenseUrl" xml:space="preserve">
-    <value>Enabling license acceptance requires a license url.</value>
+    <value>启用要求接受许可证。</value>
   </data>
   <data name="Manifest_UriCannotBeEmpty" xml:space="preserve">
-    <value>{0} cannot be empty.</value>
+    <value>{0}不能为空。</value>
   </data>
   <data name="ErrorReadingFile" xml:space="preserve">
-    <value>Error reading '{0}'.</value>
+    <value>读取 '{0}' 错误。</value>
   </data>
   <data name="InvalidVersionString" xml:space="preserve">
-    <value>'{0}' is not a valid version string.</value>
+    <value>'{0}' 不是有效的版本字符串。</value>
   </data>
   <data name="DependencyHasInvalidVersion" xml:space="preserve">
-    <value>Dependency '{0}' has an invalid version.</value>
+    <value>依赖项 '{0}' 的版本无效。</value>
   </data>
   <data name="DuplicateDependenciesDefined" xml:space="preserve">
-    <value>'{0}' already has a dependency defined for '{1}'.</value>
+    <value>'{0}' 已经为 '{1}' 定义了一个依赖项。</value>
   </data>
   <data name="PackageDoesNotContainManifest" xml:space="preserve">
-    <value>Package does not contain a manifest.</value>
+    <value>包不包含清单。</value>
   </data>
   <data name="CannotCreateEmptyPackage" xml:space="preserve">
-    <value>Cannot create a package that has no dependencies nor content.</value>
+    <value>不能创建没有依赖关系或内容的包。</value>
   </data>
   <data name="InvalidPackageId" xml:space="preserve">
-    <value>The package ID '{0}' contains invalid characters. Examples of valid package IDs include 'MyPackage' and 'MyPackage.Sample'.</value>
+    <value>包ID '{0}' 包含无效字符。有效的包id示例包括 'MyPackage' and 'MyPackage.Sample'。</value>
   </data>
   <data name="PackageAuthoring_FileNotFound" xml:space="preserve">
-    <value>File not found: '{0}'.</value>
+    <value>没找到文件： '{0}'。</value>
   </data>
   <data name="IncompatibleSchema" xml:space="preserve">
-    <value>The schema version of '{0}' is incompatible with version {1} of NuGet Package Explorer. Please upgrade NuGet Package Explorer to the latest version.</value>
+    <value>'{0}' 的模式版本与 NuGet 包浏览器 的 '{1}' 版本不兼容。请将NuGet 包浏览器升级到最新版本。</value>
   </data>
   <data name="PackageContentsVerifyError" xml:space="preserve">
-    <value>Failed to download package correctly. The contents of the package could not be verified.</value>
+    <value>无法正确下载包。包内容无法验证。</value>
   </data>
   <data name="InvalidFeed" xml:space="preserve">
-    <value>There was an error while processing the request. Please verify that '{0}' is a valid feed.</value>
+    <value>处理请求时出现错误。请验证 '{0}' 是一个有效的来源。</value>
   </data>
   <data name="InvalidFrameworkNameFormat" xml:space="preserve">
-    <value>Invalid framework name format. Expected {framework}{version}-{profile}.</value>
+    <value>无效的框架名称格式。预期值 {framework}{version}-{profile}.</value>
   </data>
   <data name="MissingFrameworkName" xml:space="preserve">
-    <value>Framework name is missing.</value>
+    <value>缺失框架名称。</value>
   </data>
   <data name="UserSettings_KeyDoesNotExist" xml:space="preserve">
-    <value>Key '{0}' does not exist.</value>
+    <value>密钥 '{0}' 不存在。</value>
   </data>
   <data name="UserSettings_SectionDoesNotExist" xml:space="preserve">
-    <value>Section'{0}' does not exist.</value>
+    <value>'{0}' 部分不存在。</value>
   </data>
   <data name="UserSettings_UnableToParseConfigFile" xml:space="preserve">
-    <value>Unable to parse config file.</value>
+    <value>无法解析配置文件。</value>
   </data>
   <data name="Manifest_ExcludeContainsInvalidCharacters" xml:space="preserve">
-    <value>Exclude path '{0}' contains invalid characters.</value>
+    <value>排除路径 '{0}' 包含无效字符。</value>
   </data>
   <data name="Manifest_SourceContainsInvalidCharacters" xml:space="preserve">
-    <value>Source path '{0}' contains invalid characters.</value>
+    <value>源路径 '{0}' 包含无效字符。</value>
   </data>
   <data name="Manifest_TargetContainsInvalidCharacters" xml:space="preserve">
-    <value>Target path '{0}' contains invalid characters.</value>
+    <value>目标路径 '{0}' 包含无效字符。</value>
   </data>
   <data name="Manifest_InvalidSchemaNamespace" xml:space="preserve">
-    <value>Invalid schema namespace '{0}'.</value>
+    <value>无效的架构名称空间 '{0}'。</value>
   </data>
   <data name="Manifest_InvalidVersion" xml:space="preserve">
-    <value>No namespace was found corresponding to the schema version '{0}'. Add an entry to the VersionToSchemaMappings dictionary in '{1}'.</value>
+    <value>没有找到与模式版本 '{0}' 对应的名称空间。在 '{1}' 中的VersionToSchemaMappings 字典中添加一个条目。</value>
   </data>
   <data name="UnableToResolveUri" xml:space="preserve">
-    <value>Unable to resolve '{0}'.</value>
+    <value>无法解析 '{0}'。</value>
   </data>
   <data name="Manifest_InvalidReference" xml:space="preserve">
-    <value>Invalid assembly reference '{0}'. Ensure that a file named '{0}' exists in the lib directory.</value>
+    <value>无效的程序集引用 '{0}'。确保在lib目录中存在名为 '{0}' 的文件。</value>
   </data>
   <data name="Manifest_InvalidPrereleaseDependency" xml:space="preserve">
-    <value>A stable release of a package should not have dependency on a prerelease package. Either modify the version spec of dependency "{0}" or update the version field.</value>
+    <value>一个包的稳定发行版不应该依赖于预发行包。要么修改依赖项 '{0}' 的版本规范，要么更新版本字段。</value>
   </data>
   <data name="Manifest_IdMaxLengthExceeded" xml:space="preserve">
-    <value>Package Id cannot exceed 100 characters.</value>
+    <value>包 Id 不能超过100个字符。</value>
   </data>
   <data name="UnableToLocateWIF" xml:space="preserve">
-    <value>Connection to feed '{0}' requires the Windows Identity Foundation runtime to be installed.</value>
+    <value>连接到源 '{0}' 需要安装 Windows Identity Foundation 运行时。</value>
   </data>
   <data name="Manifest_DependenciesHasMixedElements" xml:space="preserve">
-    <value>&lt;dependencies&gt; element must not contain both &lt;group&gt; and &lt;dependency&gt; child elements.</value>
+    <value>&lt;dependencies&gt; 元素不能同时包含 &lt;group&gt; 和 &lt;dependency&gt; 子元素。</value>
   </data>
   <data name="Manifest_InvalidMinClientVersion" xml:space="preserve">
-    <value>The 'minClientVersion' attribute in the package manifest has invalid value. It must be a valid version string.</value>
+    <value>包清单中的 'minClientVersion' 属性的值无效。它必须是一个有效的版本字符串。</value>
   </data>
   <data name="UnknownSchemaVersion" xml:space="preserve">
-    <value>Unknown schema version '{0}'.</value>
+    <value>未知模式版本 '{0}'。</value>
   </data>
   <data name="Manifest_ReferencesIsEmpty" xml:space="preserve">
-    <value>The element package\metadata\references\group must contain at least one &lt;reference&gt; child element.</value>
+    <value>package\metadata\references\group 至少必须包含一个 &lt;reference&gt; 子元素。</value>
   </data>
   <data name="Manifest_ReferencesHasMixedElements" xml:space="preserve">
-    <value>&lt;references&gt; element must not contain both &lt;group&gt; and &lt;reference&gt; child elements.</value>
+    <value>&lt;references&gt; 元素不能同时包含 &lt;group&gt; 和 &lt;reference&gt; 子元素。</value>
   </data>
 </root>
