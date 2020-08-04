@@ -216,7 +216,7 @@ namespace PackageExplorerViewModel
         {
             DiagnosticsClient.TrackEvent("SignPackageViewModel_SelectCertificateFileCommandExecute");
 
-            if (_uiServices.OpenFileDialog(Resources.SelectCertificate, "Certificate (*.pfx, *.p12)|*.pfx;*.p12|All files (*.*)|*.*", out var fileName))
+            if (_uiServices.OpenFileDialog(Resources.SelectCertificate, "证书 (*.pfx, *.p12)|*.pfx;*.p12|所有文件 (*.*)|*.*", out var fileName))
             {
                 CertificateFileName = fileName;
             }
