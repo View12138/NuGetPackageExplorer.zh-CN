@@ -87,8 +87,8 @@ namespace PackageExplorerViewModel
         private void AddLocalPlugin()
         {
             var result = _uiServices.OpenFileDialog(
-                "Select Plugin Package",
-                "NuGet package (*.nupkg)|*.nupkg",
+                "选择扩展包",
+                "NuGet 包 (*.nupkg)|*.nupkg",
                 out var selectedFile);
 
             if (result)
@@ -117,7 +117,7 @@ namespace PackageExplorerViewModel
         private void DeleteCommandExecute(PluginInfo file)
         {
             var confirmed = _uiServices.Confirm(
-                "Confirm deleting " + file,
+                "确认删除 " + file,
                 Resources.ConfirmToDeletePlugin,
                 isWarning: true);
 
