@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
@@ -405,8 +405,8 @@ namespace PackageExplorerViewModel
         private void AddExistingFileToFolder(PackageFolder folder)
         {
             var result = UIServices.OpenMultipleFilesDialog(
-                "Select Files",
-                "All files (*.*)|*.*",
+                "选择文件",
+                "所有文件 (*.*)|*.*",
                 out var selectedFiles);
 
             if (result)
@@ -495,7 +495,7 @@ namespace PackageExplorerViewModel
             parameter ??= SelectedItem ?? RootFolder;
             var folder = parameter as PackageFolder;
             var folderName = "NewFolder";
-            var result = UIServices.OpenRenameDialog(folderName, "Provide name for the new folder.", out folderName);
+            var result = UIServices.OpenRenameDialog(folderName, "提供新文件夹的名称。", out folderName);
 
             if (result)
             {
@@ -674,7 +674,7 @@ namespace PackageExplorerViewModel
             {
                 var result = UIServices.OpenRenameDialog(
                     part.Name,
-                    "Provide new name for '" + part.Name + "'.",
+                    "为 '" + part.Name + "' 提供新的名称。",
                     out var newName);
 
                 if (result)
@@ -769,8 +769,8 @@ namespace PackageExplorerViewModel
 
             try
             {
-                var title = "Save " + file.Name;
-                const string filter = "All files (*.*)|*.*";
+                var title = "保存 " + file.Name;
+                const string filter = "所有文件 (*.*)|*.*";
                 if (UIServices.OpenSaveFileDialog(title, file.Name, /* initial directory */ null, filter, /* overwritePrompt */ true,
                                                   out var selectedFileName, out var filterIndex))
                 {
@@ -896,7 +896,7 @@ namespace PackageExplorerViewModel
         {
             DiagnosticsClient.TrackEvent("PackageViewModel_ExportExecute");
 
-            if (UIServices.OpenFolderDialog("Choose a folder to export package to:", _folderPath, out var rootPath))
+            if (UIServices.OpenFolderDialog("选择一个文件夹以导出包:", _folderPath, out var rootPath))
             {
                 try
                 {
@@ -952,7 +952,7 @@ namespace PackageExplorerViewModel
             catch (Exception ex)
             {
                 DiagnosticsClient.TrackException(ex);
-                UIServices.Show("The command failed with this error message:" +
+                UIServices.Show("命令失败，并出现以下错误消息：" +
                                 Environment.NewLine +
                                 Environment.NewLine +
                                 ex.Message, MessageLevel.Error);
@@ -1168,7 +1168,7 @@ namespace PackageExplorerViewModel
         {
             var result = UIServices.OpenRenameDialog(
                 "NewFile.txt",
-                "Provide name for the new file.",
+                "为新文件提供一个名称。",
                 out var newName);
             if (result)
             {
@@ -1683,11 +1683,11 @@ namespace PackageExplorerViewModel
             catch (Exception exception)
             {
                 var confirmExit = UIServices.ConfirmCloseEditor(
-                    "There is an error in the metadata source.",
+                    "Metadata 源中有一个错误。",
                     exception.GetBaseException().Message +
                     Environment.NewLine +
                     Environment.NewLine +
-                    "Do you want to cancel your changes and return?");
+                    "你想取消更改并返回吗？");
 
                 return confirmExit;
             }
