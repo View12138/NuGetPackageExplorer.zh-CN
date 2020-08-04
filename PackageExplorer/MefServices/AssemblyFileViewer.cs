@@ -69,7 +69,7 @@ namespace PackageExplorer
                         {
                             new TabItem
                             {
-                                Header = "Assembly Attributes",
+                                Header = "程序集特性",
                                 Content = new ScrollViewer()
                                 {
                                     HorizontalScrollBarVisibility = ScrollBarVisibility.Auto,
@@ -79,7 +79,7 @@ namespace PackageExplorer
                             },
                             new TabItem
                             {
-                                Header = "PDB Info",
+                                Header = "PDB 信息",
                                 Content = new ScrollViewer
                                 {
                                     HorizontalScrollBarVisibility = ScrollBarVisibility.Auto,
@@ -92,7 +92,7 @@ namespace PackageExplorer
                             },
                             new TabItem
                             {
-                                Header = "PDB Sources",
+                                Header = "PDB 来源",
                                 Content = new ScrollViewer
                                 {
                                     HorizontalScrollBarVisibility = ScrollBarVisibility.Auto,
