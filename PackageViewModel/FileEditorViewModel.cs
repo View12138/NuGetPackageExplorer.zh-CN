@@ -64,7 +64,7 @@ namespace PackageExplorerViewModel
             if (HasEdit)
             {
                 var result = _packageViewModel.UIServices.ConfirmWithCancel(
-                    "You have unsaved changes in the current file.",
+                    "当前文件中有未保存的更改。",
                     Resources.Dialog_SaveQuestion);
                 if (result == null)
                 {
