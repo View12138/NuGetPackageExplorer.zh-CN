@@ -88,7 +88,7 @@ namespace PackageExplorer
                 Text = progressDialogText,
                 WindowTitle = Resources.Dialog_Title,
                 ShowTimeRemaining = true,
-                CancellationText = "Canceling download..."
+                CancellationText = "正在取消下载..."
             };
 
             // polling for Cancel button being clicked
@@ -144,7 +144,7 @@ namespace PackageExplorer
                         throw new OperationCanceledException();
 
                     if (result.Status == DownloadResourceResultStatus.NotFound)
-                        throw new Exception($"Package '{packageIdentity.Id} {packageIdentity.Version}' not found");
+                        throw new Exception($"没有找到包 '{packageIdentity.Id} {packageIdentity.Version}'");
 
                     var tempFilePath = Path.GetTempFileName();
                     using (var fileStream = File.OpenWrite(tempFilePath))
@@ -185,7 +185,7 @@ namespace PackageExplorer
                     percent = (int)((bytesReceived * 100L) / totalBytes)!;
                     description = string.Format(
                        CultureInfo.CurrentCulture,
-                       "Downloaded {0} of {1}...",
+                       "已下载 {0} ，共 {1}...",
                        FileSizeConverter.Convert(bytesReceived, typeof(string), null, CultureInfo.CurrentCulture),
                        FileSizeConverter.Convert(totalBytes.Value, typeof(string), null, CultureInfo.CurrentCulture));
                 }
@@ -194,7 +194,7 @@ namespace PackageExplorer
                     percent = null;
                     description = string.Format(
                         CultureInfo.CurrentCulture,
-                        "Downloaded {0}...",
+                        "已下载 {0}...",
                         FileSizeConverter.Convert(bytesReceived, typeof(string), null, CultureInfo.CurrentCulture));
                 }
                 Interlocked.Exchange(ref updated, 1);
