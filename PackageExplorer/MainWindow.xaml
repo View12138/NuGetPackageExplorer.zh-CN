@@ -66,38 +66,38 @@
     <DockPanel x:Name="RootLayout" LastChildFill="True" Visibility="{Binding IsInEditFileMode, Mode=OneWay, FallbackValue=Visible, Converter={StaticResource invertedBoolToVis}}">
         <!-- Menu bar -->
         <Menu DockPanel.Dock="Top" Background="{StaticResource MenuBackgroundBrush}">
-            <self:GrayscaleMenuItem Header="_File" Margin="3,0">
-                <MenuItem Command="New" Header="_New" Icon="{StaticResource NewItemIcon}" />
-                <self:GrayscaleMenuItem Command="Open" Header="_Open..." Icon="{StaticResource OpenFolderIcon}" />
-                <MenuItem Header="Open from F_eed..." Command="Print" InputGestureText="Ctrl+G" />
+            <self:GrayscaleMenuItem Header="文件(_F)" Margin="3,0">
+                <MenuItem Command="New" Header="新建(_N)" Icon="{StaticResource NewItemIcon}" />
+                <self:GrayscaleMenuItem Command="Open" Header="打开(_O)..." Icon="{StaticResource OpenFolderIcon}" />
+                <MenuItem Header="从源打开(_E)..." Command="Print" InputGestureText="Ctrl+G" />
                 <Separator />
-                <MenuItem Command="Close" Header="_Close" />
+                <MenuItem Command="Close" Header="关闭(_C)" />
                 <Separator />
-                <self:GrayscaleMenuItem x:Name="SaveMenuItem" Header="_Save" Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="Save" InputGestureText="Ctrl+S">
+                <self:GrayscaleMenuItem x:Name="SaveMenuItem" Header="保存(_S)" Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="Save" InputGestureText="Ctrl+S">
                     <self:GrayscaleMenuItem.Icon>                        
                         <self:GrayscaleContentPresenter Content="{StaticResource SaveIcon}" />
                     </self:GrayscaleMenuItem.Icon>
                 </self:GrayscaleMenuItem>
-                <self:GrayscaleMenuItem Header="Save _As..." Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="SaveAs" InputGestureText="Ctrl+Shift+S">
+                <self:GrayscaleMenuItem Header="另存为(_A)..." Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="SaveAs" InputGestureText="Ctrl+Shift+S">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource SaveAsIcon}" />
                     </self:GrayscaleMenuItem.Icon>
                 </self:GrayscaleMenuItem>
-                <MenuItem Header="Save _Metadata As..." Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="SaveMetadataAs" />
-                <MenuItem Header="Sign and Save As..." Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="SignAndSaveAs" />
+                <MenuItem Header="_Metadata 另存为..." Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="SaveMetadataAs" />
+                <MenuItem Header="签名并另存为..." Command="{Binding SaveCommand, FallbackValue={StaticResource DisabledCommand}}" CommandParameter="SignAndSaveAs" />
                 <Separator />
-                <MenuItem Header="Expor_t..." Command="{Binding ExportCommand, FallbackValue={StaticResource DisabledCommand}}" />
-                <self:GrayscaleMenuItem Command="{Binding PublishCommand, FallbackValue={StaticResource DisabledCommand}}" Header="_Publish..." InputGestureText="Ctrl+P">
+                <MenuItem Header="导出(_T)..." Command="{Binding ExportCommand, FallbackValue={StaticResource DisabledCommand}}" />
+                <self:GrayscaleMenuItem Command="{Binding PublishCommand, FallbackValue={StaticResource DisabledCommand}}" Header="发布(_P)..." InputGestureText="Ctrl+P">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource ReleaseIcon}" />
                     </self:GrayscaleMenuItem.Icon>
                 </self:GrayscaleMenuItem>
                 <Separator />
-                <MenuItem Header="_Recent Files" x:Name="RecentFilesMenuItem" Visibility="{Binding Files.Count, Converter={StaticResource countConverter}}">
+                <MenuItem Header="近期文件(_R)" x:Name="RecentFilesMenuItem" Visibility="{Binding Files.Count, Converter={StaticResource countConverter}}">
                     <MenuItem.ItemsSource>
                         <CompositeCollection>
                             <CollectionContainer x:Name="RecentFilesContainer" />
-                            <MenuItem Header="Clear Recen_t File List">
+                            <MenuItem Header="清除近期文件列表(_T)">
                                 <MenuItem.Icon>
                                     <ContentPresenter Content="{StaticResource CloseIcon}" />
                                 </MenuItem.Icon>
@@ -113,17 +113,17 @@
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>
                 <Separator Visibility="{Binding Visibility, ElementName=RecentFilesMenuItem, Mode=OneWay}" />
-                <MenuItem Header="E_xit" Click="ExitMenuItem_Click" />
+                <MenuItem Header="退出(_X)" Click="ExitMenuItem_Click" />
             </self:GrayscaleMenuItem>
 
-            <self:GrayscaleMenuItem Header="_Edit" Margin="3,0" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
-                <self:GrayscaleMenuItem Header="Edit _Metadata" InputGestureText="Ctrl+K" Command="{Binding EditCommand, FallbackValue={StaticResource DisabledCommand}}">
+            <self:GrayscaleMenuItem Header="编辑(_E)" Margin="3,0" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
+                <self:GrayscaleMenuItem Header="编辑 _Metadata" InputGestureText="Ctrl+K" Command="{Binding EditCommand, FallbackValue={StaticResource DisabledCommand}}">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource EditManifestIcon}" />
                     </self:GrayscaleMenuItem.Icon>
                 </self:GrayscaleMenuItem>
 
-                <self:GrayscaleMenuItem Header="Edit Metadata _Source" Command="{Binding EditMetadataSourceCommand, FallbackValue={StaticResource DisabledCommand}}">
+                <self:GrayscaleMenuItem Header="编辑 Metadata 源(_S)" Command="{Binding EditMetadataSourceCommand, FallbackValue={StaticResource DisabledCommand}}">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource MarkupTagIcon}" />
                     </self:GrayscaleMenuItem.Icon>
@@ -131,13 +131,13 @@
 
                 <Separator />
 
-                <self:GrayscaleMenuItem Header="Remove Package Signatures" Command="{Binding RemoveSignaturesCommand, FallbackValue={StaticResource DisabledCommand}}">
+                <self:GrayscaleMenuItem Header="移除包签名" Command="{Binding RemoveSignaturesCommand, FallbackValue={StaticResource DisabledCommand}}">
   
                 </self:GrayscaleMenuItem>
 
                 <MenuItem Visibility="{Binding SelectedItem, Converter={StaticResource PackagePartConverter}, ConverterParameter=file, FallbackValue=Collapsed}" Command="{Binding EditFileCommand}" CommandParameter="{Binding SelectedItem, FallbackValue={x:Null}}">
                     <MenuItem.Header>
-                        <TextBlock Text="{Binding SelectedItem.Name, Mode=OneWay, FallbackValue='', StringFormat='Edit \'{0}\'', Converter={StaticResource StringShortenerConverter}, ConverterParameter=35}" />
+                        <TextBlock Text="{Binding SelectedItem.Name, Mode=OneWay, FallbackValue='', StringFormat='编辑 ‘{0}’', Converter={StaticResource StringShortenerConverter}, ConverterParameter=35}" />
                     </MenuItem.Header>
                 </MenuItem>
 
@@ -159,110 +159,110 @@
                 </self:GrayscaleMenuItem>
             </self:GrayscaleMenuItem>
 
-            <MenuItem Header="_View" Margin="3,0">
-                <MenuItem Header="Text _Size" x:Name="FontSizeMenuItem" Icon="{StaticResource FontSizeIcon}">
-                    
-                    <self:GrayscaleMenuItem Header="_Normal" Tag="12" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=12, Mode=OneWay}" />
-                    <self:GrayscaleMenuItem Header="_Medium" Tag="14" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=14, Mode=OneWay}" />
-                    <self:GrayscaleMenuItem Header="L_arge" Tag="16" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=16, Mode=OneWay}" />
-                    <self:GrayscaleMenuItem Header="E_xtra Large" Tag="18" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=18, Mode=OneWay}" />
+            <MenuItem Header="视图(_V)" Margin="3,0">
+                <MenuItem Header="字体大小(_S)" x:Name="FontSizeMenuItem" Icon="{StaticResource FontSizeIcon}">
+
+                    <self:GrayscaleMenuItem Header="正常(_N)" Tag="12" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=12, Mode=OneWay}" />
+                    <self:GrayscaleMenuItem Header="中等(_M)" Tag="14" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=14, Mode=OneWay}" />
+                    <self:GrayscaleMenuItem Header="大(_L)" Tag="16" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=16, Mode=OneWay}" />
+                    <self:GrayscaleMenuItem Header="特大(_X)" Tag="18" Click="OnFontSizeItem_Click" IsChecked="{Binding FontSize, Source={StaticResource Settings}, Converter={StaticResource FontSizeToBoolConverter}, ConverterParameter=18, Mode=OneWay}" />
                 </MenuItem>
-                <MenuItem Header="Show Common Tas_ks" IsChecked="{Binding ShowTaskShortcuts, Source={StaticResource Settings}}" IsCheckable="true" />
-                <MenuItem Header="Show Status _Bar" x:Name="ShowStatusBarMenuItem" IsCheckable="True" IsChecked="True" />
+                <MenuItem Header="显示公共任务(_K)" IsChecked="{Binding ShowTaskShortcuts, Source={StaticResource Settings}}" IsCheckable="true" />
+                <MenuItem Header="显示状态栏(_B)" x:Name="ShowStatusBarMenuItem" IsCheckable="True" IsChecked="True" />
             </MenuItem>
 
-            <MenuItem Header="_Content" Margin="3,0" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
-                <MenuItem Header="View File _Content" Command="{Binding ViewContentCommand}" InputGestureText="Enter" />
-                <MenuItem Header="Open File in Window_s shell..." Command="{Binding OpenContentFileCommand}" InputGestureText="Shift+Enter" />
+            <MenuItem Header="内容(_C)" Margin="3,0" Visibility="{Binding Converter={StaticResource NullToVisibilityConverter}}">
+                <MenuItem Header="查看文件内容(_C)" Command="{Binding ViewContentCommand}" InputGestureText="Enter" />
+                <MenuItem Header="在 Windows shell 中打开文件(_S)..." Command="{Binding OpenContentFileCommand}" InputGestureText="Shift+Enter" />
                 <Separator />
-                <MenuItem Header="_Add">
+                <MenuItem Header="添加(_A)">
                     <MenuItem.Icon>
                         <ContentPresenter Content="{StaticResource AddIcon}" />
                     </MenuItem.Icon>
-                    <MenuItem Header="New F_ile..." Command="{Binding AddNewFileCommand}" Icon="{StaticResource NewItemIcon}"/>
-                    <MenuItem Header="_Existing File..." Command="{Binding AddContentFileCommand}" Icon="{StaticResource AddItemIcon}" />
-                    <self:GrayscaleMenuItem Header="_New Folder" Command="{Binding AddNewFolderCommand}">
+                    <MenuItem Header="新建文件(_I)..." Command="{Binding AddNewFileCommand}" Icon="{StaticResource NewItemIcon}"/>
+                    <MenuItem Header="现有文件(_E)..." Command="{Binding AddContentFileCommand}" Icon="{StaticResource AddItemIcon}" />
+                    <self:GrayscaleMenuItem Header="新建文件夹(_N)" Command="{Binding AddNewFolderCommand}">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource AddFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
                     <Separator />
-                    <self:GrayscaleMenuItem Header="_Content Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="content">
+                    <self:GrayscaleMenuItem Header="Content 文件夹(_C)" Command="{Binding AddContentFolderCommand}" CommandParameter="content">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource ContentFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
-                    <self:GrayscaleMenuItem Header="_Lib Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="lib">
+                    <self:GrayscaleMenuItem Header="Lib 文件夹(_L)" Command="{Binding AddContentFolderCommand}" CommandParameter="lib">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource LibFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
-                    <self:GrayscaleMenuItem Header="_Tools Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="tools">
+                    <self:GrayscaleMenuItem Header="Tools 文件夹(_T)" Command="{Binding AddContentFolderCommand}" CommandParameter="tools">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource ToolsFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
-                    <self:GrayscaleMenuItem Header="_Build Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="build">
+                    <self:GrayscaleMenuItem Header="Build 文件夹(_B)" Command="{Binding AddContentFolderCommand}" CommandParameter="build">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource BuildFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
-                    <self:GrayscaleMenuItem Header="Add Build_MultiTargeting Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="buildMultiTargeting">
+                    <self:GrayscaleMenuItem Header="添加 BuildMultiTargeting 文件夹(_M)" Command="{Binding AddContentFolderCommand}" CommandParameter="buildMultiTargeting">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource BuildFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
-                    <self:GrayscaleMenuItem Header="Add BuildT_ransitive Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="buildTransitive">
+                    <self:GrayscaleMenuItem Header="添加 BuildTransitive 文件夹(_R)" Command="{Binding AddContentFolderCommand}" CommandParameter="buildTransitive">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource BuildFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
-                    <self:GrayscaleMenuItem Header="_Src Folder" Command="{Binding AddContentFolderCommand}" CommandParameter="src">
+                    <self:GrayscaleMenuItem Header="Src 文件夹(_S)" Command="{Binding AddContentFolderCommand}" CommandParameter="src">
                         <self:GrayscaleMenuItem.Icon>
                             <self:GrayscaleContentPresenter Content="{StaticResource SourceFolderIcon}" />
                         </self:GrayscaleMenuItem.Icon>
                     </self:GrayscaleMenuItem>
                 </MenuItem>
-                <MenuItem Header="_Rename..." Command="{Binding RenameContentCommand}" InputGestureText="F2" Icon="{StaticResource RenameIcon}" />
-                <self:GrayscaleMenuItem Header="_Delete..." Command="{Binding DeleteContentCommand}" InputGestureText="Delete">
+                <MenuItem Header="重命名(_R)..." Command="{Binding RenameContentCommand}" InputGestureText="F2" Icon="{StaticResource RenameIcon}" />
+                <self:GrayscaleMenuItem Header="删除(_D)..." Command="{Binding DeleteContentCommand}" InputGestureText="Delete">
                     <self:GrayscaleMenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource RemoveIcon}" />
                     </self:GrayscaleMenuItem.Icon>
                 </self:GrayscaleMenuItem>
             </MenuItem>
 
-            <MenuItem Header="_Tools" Margin="3,0" DisplayMemberPath="Metadata.Text" ItemContainerStyleSelector="{StaticResource PackageCommandItemStyleSelector}">
+            <MenuItem Header="工具(_T)" Margin="3,0" DisplayMemberPath="Metadata.Text" ItemContainerStyleSelector="{StaticResource PackageCommandItemStyleSelector}">
                 <MenuItem.ItemsSource>
                     <CompositeCollection>
                         <CollectionContainer x:Name="PackageCommandsContainer"></CollectionContainer>
 
-                        <MenuItem Header="_Analyze Package" InputGestureText="Ctrl+Q" Command="{Binding ViewPackageAnalysisCommand}" Visibility="{Binding Mode=OneWay, Converter={StaticResource NullToVisibilityConverter}}" />
+                        <MenuItem Header="分析包(_A)" InputGestureText="Ctrl+Q" Command="{Binding ViewPackageAnalysisCommand}" Visibility="{Binding Mode=OneWay, Converter={StaticResource NullToVisibilityConverter}}" />
                         <Separator Visibility="{Binding Mode=OneWay, Converter={StaticResource NullToVisibilityConverter}}" />
-                        <MenuItem Header="_Plugin Manager..." Click="AddPluginFromAssembly_Click" x:Name="pluginMenuItem">
+                        <MenuItem Header="扩展管理器(_P)..." Click="AddPluginFromAssembly_Click" x:Name="pluginMenuItem">
                             <MenuItem.Icon>
                                 <ContentPresenter Content="{StaticResource ExtensionIcon}" />
                             </MenuItem.Icon>
                         </MenuItem>
                         <Separator x:Name="mnuPluginSep" />
-                        <MenuItem Header="Vi_ew NuGet download cache" Click="ViewDownloadCache_Click" />
-                        <MenuItem Header="Clea_r NuGet download cache" Click="ClearDownloadCache_Click" />
+                        <MenuItem Header="查看 NuGet 下载缓存(_E)" Click="ViewDownloadCache_Click" />
+                        <MenuItem Header="清除 NuGet 下载缓存(_R)" Click="ClearDownloadCache_Click" />
                     </CompositeCollection>
                 </MenuItem.ItemsSource>
 
             </MenuItem>
 
-            <MenuItem Header="_Help" Margin="3,0">
-                <MenuItem Header="_NuGet Documentation" Command="GoToPage" CommandParameter="https://docs.nuget.org/">
+            <MenuItem Header="帮助(_H)" Margin="3,0">
+                <MenuItem Header="NuGet 文档(_N)" Command="GoToPage" CommandParameter="https://docs.nuget.org/">
                     <MenuItem.Icon>
                         <self:GrayscaleContentPresenter Content="{StaticResource F1HelpIcon}" />
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="How to _Create Package" Command="GoToPage" CommandParameter="https://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package" />
-                <MenuItem Header="_Nuspec Reference" Command="GoToPage" CommandParameter="https://docs.nuget.org/docs/reference/nuspec-reference" />
-                <MenuItem Header="_Version Range Specification" Command="GoToPage" CommandParameter="https://docs.nuget.org/docs/reference/version-range-specification" />
+                <MenuItem Header="怎样创建包(_C)" Command="GoToPage" CommandParameter="https://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package" />
+                <MenuItem Header="Nuspec 引用(_N)" Command="GoToPage" CommandParameter="https://docs.nuget.org/docs/reference/nuspec-reference" />
+                <MenuItem Header="版本范围规范(_V)" Command="GoToPage" CommandParameter="https://docs.nuget.org/docs/reference/version-range-specification" />
                 <Separator />
-                <MenuItem Header="_Open Bug..." Command="GoToPage" CommandParameter="https://github.com/NuGetPackageExplorer/NuGetPackageExplorer/issues/new" />
-                <MenuItem Header="_About..." Command="Help" />
+                <MenuItem Header="报告 Bug(_O)..." Command="GoToPage" CommandParameter="https://github.com/NuGetPackageExplorer/NuGetPackageExplorer/issues/new" />
+                <MenuItem Header="关于(_A)..." Command="Help" />
             </MenuItem>
         </Menu>
 
