@@ -256,7 +256,7 @@ namespace PackageExplorerViewModel
                     PackageSource = _defaultPackageSourceUrl ?? NuGetConstants.DefaultFeedUrl;
                     ActiveRepository = PackageRepositoryFactory.CreateRepository(PackageSource);
 
-                    _uIServices.Show($"Package Source '{origSource}' is not valid. Defaulting to '{NuGetConstants.DefaultFeedUrl}", MessageLevel.Error);
+                    _uIServices.Show($"包来源 '{origSource}' 是无效的。 将预设为 '{NuGetConstants.DefaultFeedUrl}", MessageLevel.Error);
                 }
             }
 
