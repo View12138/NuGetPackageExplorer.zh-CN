@@ -4,7 +4,7 @@
         xmlns:self="clr-namespace:PackageExplorer" 
         xmlns:types="clr-namespace:NuGetPe;assembly=NuGetPackageExplorer.Types"   
         xmlns:pack="clr-namespace:NuGet.Packaging;assembly=NuGet.Packaging"
-        Title="Package Dependency Editor" 
+        Title="包依赖项编辑器" 
         ShowInTaskbar="False"
         WindowStartupLocation="CenterOwner"
         FontSize="{Binding FontSize, Source={StaticResource Settings}, Mode=OneWay}" 
@@ -43,12 +43,12 @@
         </Grid.ColumnDefinitions>
 
         <!-- Groups label -->
-        <Label Content="_Groups" Target="DependencyGroupList" FontWeight="SemiBold" />
+        <Label Content="分组(_G)" Target="DependencyGroupList" FontWeight="SemiBold" />
 
         <!-- buttons to add/remove group -->
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button ToolTip="Add a new group" Click="OnAddGroupClicked" Margin="0,0,4,0" Content="{StaticResource AddIcon}" />
-            <self:GrayscaleButton ToolTip="Delete the selected group" Click="OnRemoveGroupClicked" IsEnabled="{Binding SelectedItem, ElementName=DependencyGroupList, Converter={StaticResource nullToBoolConverter}}">
+            <Button ToolTip="添加一个新分组" Click="OnAddGroupClicked" Margin="0,0,4,0" Content="{StaticResource AddIcon}" />
+            <self:GrayscaleButton ToolTip="删除选中的分组" Click="OnRemoveGroupClicked" IsEnabled="{Binding SelectedItem, ElementName=DependencyGroupList, Converter={StaticResource nullToBoolConverter}}">
                 <self:GrayscaleContentPresenter Content="{StaticResource RemoveIcon}" />
             </self:GrayscaleButton>
         </StackPanel>
@@ -58,7 +58,7 @@
         </ListBox>
 
         <!-- Group details label -->
-        <Label Content="Group _details" FontWeight="SemiBold" Grid.Column="1" HorizontalAlignment="Center">
+        <Label Content="分组详情(_D)" FontWeight="SemiBold" Grid.Column="1" HorizontalAlignment="Center">
         </Label>
 
         <!-- group details -->
@@ -85,7 +85,7 @@
 
             <!-- target framework textbox -->
             <DockPanel Grid.ColumnSpan="4" LastChildFill="True">
-                <Label DockPanel.Dock="Left" Content="_Target framework" Target="TargetFrameworkBox" />
+                <Label DockPanel.Dock="Left" Content="目标框架(_T)" Target="TargetFrameworkBox" />
                 <TextBox x:Name="TargetFrameworkBox" Text="{Binding TargetFramework, BindingGroupName={x:Null}, Converter={StaticResource TargetFrameworkConverter}, UpdateSourceTrigger=LostFocus}" />
             </DockPanel>
 
@@ -106,21 +106,21 @@
                     
                 <ListView.View>
                     <GridView AllowsColumnReorder="False">
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" Width="180">
+                        <GridViewColumn Header="包 Id" DisplayMemberBinding="{Binding Id}" Width="180">
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Version" Width="130">
+                        <GridViewColumn Header="版本" Width="130">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding VersionRange, Converter={StaticResource VersionSpecConverter}, TargetNullValue='(not set)', Mode=OneWay}" TextAlignment="Center" />
+                                    <TextBlock Text="{Binding VersionRange, Converter={StaticResource VersionSpecConverter}, TargetNullValue='(未设置)', Mode=OneWay}" TextAlignment="Center" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <GridViewColumn Header="Exclude" Width="45">
+                        <GridViewColumn Header="排除" Width="45">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Exclude, Converter={StaticResource StringCollectionsToStringConverter}, TargetNullValue='(not set)', Mode=OneWay}" TextAlignment="Center" />
+                                    <TextBlock Text="{Binding Exclude, Converter={StaticResource StringCollectionsToStringConverter}, TargetNullValue='(未设置)', Mode=OneWay}" TextAlignment="Center" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -128,7 +128,7 @@
                         <GridViewColumn Width="80">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock ToolTipService.ToolTip="Delete this dependency" TextAlignment="Center">
+                                    <TextBlock ToolTipService.ToolTip="删除依赖项" TextAlignment="Center">
                                         <Hyperlink Click="RemoveDependencyButtonClicked">delete</Hyperlink>
                                     </TextBlock>
                                 </DataTemplate>
@@ -138,14 +138,14 @@
                 </ListView.View>
             </ListView>
 
-            <self:GrayscaleButton Margin="0,2,0,2" Grid.Column="0" Grid.Row="2" ToolTipService.ToolTip="Select dependency from NuGet feed" Click="SelectDependencyButtonClicked">
+            <self:GrayscaleButton Margin="0,2,0,2" Grid.Column="0" Grid.Row="2" ToolTipService.ToolTip="从 NuGet 源选择依赖项" Click="SelectDependencyButtonClicked">
                 <self:GrayscaleContentPresenter Content="{StaticResource PropertyIcon}" />
             </self:GrayscaleButton>
 
             <TextBox x:Name="NewDependencyId" Text="{Binding Id, BindingGroupName=NewPackageDependency, ValidatesOnDataErrors=True}" Margin="2" Grid.Column="1" Grid.Row="2" />
             <TextBox x:Name="NewDependencyVersion" Text="{Binding VersionSpec, BindingGroupName=NewPackageDependency, Converter={StaticResource VersionSpecConverter}}" Margin="2" Grid.Column="2" Grid.Row="2" />
 
-            <self:GrayscaleButton Margin="0,2,0,2" Grid.Column="3" Grid.Row="2" ToolTipService.ToolTip="Add new dependency" Click="AddDependencyButtonClicked">
+            <self:GrayscaleButton Margin="0,2,0,2" Grid.Column="3" Grid.Row="2" ToolTipService.ToolTip="添加新的依赖项" Click="AddDependencyButtonClicked">
                 <self:GrayscaleContentPresenter Content="{StaticResource AddIcon}" />
                 <self:GrayscaleButton.IsEnabled>
                     <Binding Path="Text" ElementName="NewDependencyId" Converter="{StaticResource nullToBoolConverter}" Mode="OneWay" />
@@ -158,8 +158,8 @@
 
         <!-- OK and Cancel buttons -->
         <UniformGrid HorizontalAlignment="Right" Grid.Row="3" Grid.ColumnSpan="2" Rows="1" Columns="2">
-            <Button IsDefault="True" Content="OK" Margin="5,10,5,0" Click="OkButton_Click" Padding="15,2" />
-            <Button Content="Cancel" Command="{Binding CancelCommand, Mode=OneWay}" Click="CancelButton_Click" Margin="5,10,5,0" Padding="15,2" />
+            <Button IsDefault="True" Content="确认" Margin="5,10,5,0" Click="OkButton_Click" Padding="15,2" />
+            <Button Content="取消" Command="{Binding CancelCommand, Mode=OneWay}" Click="CancelButton_Click" Margin="5,10,5,0" Padding="15,2" />
         </UniformGrid>
     </Grid>
 </self:StandardDialog>
