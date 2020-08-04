@@ -43,7 +43,7 @@
 
                 <TextBlock Grid.Column="0" Text="{Binding AssemblyName, Mode=OneWay}" TextTrimming="CharacterEllipsis" ToolTipService.ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}" />
                 <TextBlock Grid.Column="1" Margin="4,0,4,0" Text="{Binding Converter={StaticResource FrameworkAssemblyReferenceDisplayConverter}}" TextTrimming="CharacterEllipsis" />
-                <Button Grid.Column="2" ToolTipService.ToolTip="Remove this framework assembly" Click="RemoveFrameworkAssemblyButtonClicked" Content="{StaticResource RemoveIcon}" />
+                <Button Grid.Column="2" ToolTipService.ToolTip="移除这个 框架程序集" Click="RemoveFrameworkAssemblyButtonClicked" Content="{StaticResource RemoveIcon}" />
             </Grid>
         </DataTemplate>
     </UserControl.Resources>
@@ -92,11 +92,11 @@
             </Grid.BindingGroup>
 
             <!-- Id -->
-            <Label Grid.Row="0" Grid.Column="0" Target="IdBox" Style="{StaticResource RequiredLabelStyle}" Content="_Id" />
+            <Label Grid.Row="0" Grid.Column="0" Target="IdBox" Style="{StaticResource RequiredLabelStyle}" Content="包 Id(_I)" />
             <TextBox Grid.Row="0" Grid.Column="1" x:Name="IdBox" MaxLength="100" Text="{Binding PackageMetadata.Id, ValidatesOnDataErrors=True}" />
 
             <!-- Version -->
-            <Label Grid.Row="1" Grid.Column="0" Target="VersionBox" Style="{StaticResource RequiredLabelStyle}" Content="_Version" />
+            <Label Grid.Row="1" Grid.Column="0" Target="VersionBox" Style="{StaticResource RequiredLabelStyle}" Content="版本(_V)" />
             <TextBox Grid.Row="1" Grid.Column="1" x:Name="VersionBox">
                 <TextBox.Text>
                     <Binding Path="PackageMetadata.Version" Converter="{StaticResource VersionConverter}" ValidatesOnDataErrors="True">
@@ -108,19 +108,19 @@
             </TextBox>
 
             <!-- Title -->
-            <Label Grid.Row="2" Grid.Column="0" Target="TitleBox" Style="{StaticResource LabelStyle}" Content="_Title" />
+            <Label Grid.Row="2" Grid.Column="0" Target="TitleBox" Style="{StaticResource LabelStyle}" Content="标题(_T)" />
             <TextBox Grid.Row="2" Grid.Column="1" x:Name="TitleBox" Text="{Binding PackageMetadata.Title}" />
 
             <!-- Authors -->
-            <Label Grid.Row="3" Grid.Column="0" Target="AuthorsBox" Style="{StaticResource RequiredLabelStyle}" Content="_Authors" />
+            <Label Grid.Row="3" Grid.Column="0" Target="AuthorsBox" Style="{StaticResource RequiredLabelStyle}" Content="作者(_A)" />
             <TextBox Grid.Row="3" Grid.Column="1" x:Name="AuthorsBox" Text="{Binding PackageMetadata.Authors, ValidatesOnDataErrors=True}" />
 
             <!-- Owners -->
-            <Label Grid.Row="4" Grid.Column="0" Target="OwnersBox" Style="{StaticResource LabelStyle}" Content="_Owners" />
+            <Label Grid.Row="4" Grid.Column="0" Target="OwnersBox" Style="{StaticResource LabelStyle}" Content="所有者(_O)" />
             <TextBox Grid.Row="4" Grid.Column="1" x:Name="OwnersBox" Text="{Binding PackageMetadata.Owners}" />
 
             <!-- Min client Version -->
-            <Label Grid.Row="5" Grid.Column="0" Target="MinVersionBox" Style="{StaticResource LabelStyle}" Content="_Min client version" />
+            <Label Grid.Row="5" Grid.Column="0" Target="MinVersionBox" Style="{StaticResource LabelStyle}" Content="最小客户端版本(_M)" />
             <TextBox Grid.Row="5" Grid.Column="1" x:Name="MinVersionBox" MaxLength="100">
                 <TextBox.Text>
                     <Binding Path="PackageMetadata.MinClientVersion" Converter="{StaticResource NetVersionConverter}" ValidatesOnDataErrors="True">
@@ -132,65 +132,65 @@
             </TextBox>
 
             <!-- Development Dependency -->
-            <CheckBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" IsChecked="{Binding PackageMetadata.DevelopmentDependency}" Content="_Development Dependency" Style="{StaticResource CheckBoxStyle}" />
+            <CheckBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" IsChecked="{Binding PackageMetadata.DevelopmentDependency}" Content="开发依赖(_D)" Style="{StaticResource CheckBoxStyle}" />
 
             <!-- Icon -->
-            <Label Grid.Row="7" Grid.Column="0" Target="IconBox" Style="{StaticResource LabelStyle}" Content="Icon" />
+            <Label Grid.Row="7" Grid.Column="0" Target="IconBox" Style="{StaticResource LabelStyle}" Content="图标" />
             <ComboBox Grid.Row="7" Grid.Column="1" x:Name="IconBox" IsEditable="True" Text="{Binding PackageMetadata.IconOrIconUrl}" ItemsSource="{Binding IconPaths}" Style="{StaticResource ComboBoxStyle}" />
 
             <!-- ProjectUrl -->
-            <Label Grid.Row="8" Grid.Column="0" Target="ProjectUrlBox" Style="{StaticResource LabelStyle}" Content="_Project Url" />
+            <Label Grid.Row="8" Grid.Column="0" Target="ProjectUrlBox" Style="{StaticResource LabelStyle}" Content="项目 Url(_P)" />
             <TextBox Grid.Row="8" Grid.Column="1" x:Name="ProjectUrlBox" Text="{Binding PackageMetadata.ProjectUrl, Converter={StaticResource UriConverter}}" />
 
             <!-- RepositoryType -->
-            <Label Grid.Row="9" Grid.Column="0" Target="RepositoryTypeBox" Style="{StaticResource LabelStyle}" Content="_Repository Type" />
+            <Label Grid.Row="9" Grid.Column="0" Target="RepositoryTypeBox" Style="{StaticResource LabelStyle}" Content="存储库类型(_R)" />
             <TextBox Grid.Row="9" Grid.Column="1" x:Name="RepositoryTypeBox" Text="{Binding PackageMetadata.Repository.Type}" />
 
             <!-- RepositoryUrl -->
-            <Label Grid.Row="10" Grid.Column="0" Target="RepositoryUrlBox" Style="{StaticResource LabelStyle}" Content="_Repository Url" />
+            <Label Grid.Row="10" Grid.Column="0" Target="RepositoryUrlBox" Style="{StaticResource LabelStyle}" Content="存储库 Url(_R)" />
             <TextBox Grid.Row="10" Grid.Column="1" x:Name="RepositoryUrlBox" Text="{Binding PackageMetadata.Repository.Url}" />
           
             <!-- RepositoryBranch -->
-            <Label Grid.Row="11" Grid.Column="0" Target="RepositoryBranchBox" Style="{StaticResource LabelStyle}" Content="_Repository Branch" />
+            <Label Grid.Row="11" Grid.Column="0" Target="RepositoryBranchBox" Style="{StaticResource LabelStyle}" Content="存储库分支(_R)" />
             <TextBox Grid.Row="11" Grid.Column="1" x:Name="RepositoryBranchBox" Text="{Binding PackageMetadata.Repository.Branch}" />
           
             <!-- RepositoryCommit -->
-            <Label Grid.Row="12" Grid.Column="0" Target="RepositoryCommitBox" Style="{StaticResource LabelStyle}" Content="_Repository Commit" />
+            <Label Grid.Row="12" Grid.Column="0" Target="RepositoryCommitBox" Style="{StaticResource LabelStyle}" Content="存储库提交(_R)" />
             <TextBox Grid.Row="12" Grid.Column="1" x:Name="RepositoryCommitBox" Text="{Binding PackageMetadata.Repository.Commit}" />
 
             <!-- Require License Acceptane -->
-            <CheckBox Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" IsChecked="{Binding PackageMetadata.RequireLicenseAcceptance}" Content="_Requires License Acceptance" Style="{StaticResource CheckBoxStyle}" />
+            <CheckBox Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" IsChecked="{Binding PackageMetadata.RequireLicenseAcceptance}" Content="要求接受许可证(_R)" Style="{StaticResource CheckBoxStyle}" />
 
             <!-- LicenseUrl -->
-            <Label Grid.Row="14" Grid.Column="0" Target="LicenseUrlBox" Style="{StaticResource LabelStyle}" Content="_License Url" />
+            <Label Grid.Row="14" Grid.Column="0" Target="LicenseUrlBox" Style="{StaticResource LabelStyle}" Content="许可证 Url(_L)" />
             <TextBox Grid.Row="14" Grid.Column="1" x:Name="LicenseUrlBox" Text="{Binding PackageMetadata.LicenseUrl, Converter={StaticResource UriConverter}, ValidatesOnDataErrors=true}" />
 
             <!-- Summary -->
-            <Label Grid.Row="15" Grid.Column="0" Target="SummaryBox" Style="{StaticResource LabelStyle}" Content="_Summary" />
+            <Label Grid.Row="15" Grid.Column="0" Target="SummaryBox" Style="{StaticResource LabelStyle}" Content="概要(_S)" />
             <TextBox Grid.Row="15" Grid.Column="1" Height="80" MaxLength="200" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" x:Name="SummaryBox" Text="{Binding PackageMetadata.Summary}" AcceptsReturn="True" />
 
             <!-- Description -->
-            <Label Grid.Row="16" Grid.Column="0" Target="DescriptionBox" Style="{StaticResource RequiredLabelStyle}" Content="_Description" />
+            <Label Grid.Row="16" Grid.Column="0" Target="DescriptionBox" Style="{StaticResource RequiredLabelStyle}" Content="说明(_D)" />
             <TextBox Grid.Row="16" Grid.Column="1" Height="80" MaxLength="2000" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" x:Name="DescriptionBox" Text="{Binding PackageMetadata.Description, ValidatesOnDataErrors=True}" AcceptsReturn="True" />
 
             <!-- Release Notes -->
-            <Label Grid.Row="17" Grid.Column="0" Target="ReleaseNotesBox" Style="{StaticResource LabelStyle}" Content="_Release Notes" />
+            <Label Grid.Row="17" Grid.Column="0" Target="ReleaseNotesBox" Style="{StaticResource LabelStyle}" Content="发行说明(_R)" />
             <TextBox Grid.Row="17" Grid.Column="1" Height="80" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" x:Name="ReleaseNotesBox" Text="{Binding PackageMetadata.ReleaseNotes}" AcceptsReturn="True" />
 
             <!-- Copyright -->
-            <Label Grid.Row="18" Grid.Column="0" Target="CopyrightBox" Style="{StaticResource LabelStyle}" Content="Cop_yright" />
+            <Label Grid.Row="18" Grid.Column="0" Target="CopyrightBox" Style="{StaticResource LabelStyle}" Content="版权(_Y)" />
             <TextBox Grid.Row="18" Grid.Column="1" x:Name="CopyrightBox" Text="{Binding PackageMetadata.Copyright, ValidatesOnDataErrors=true}" />
 
             <!-- Language -->
-            <Label Grid.Row="19" Grid.Column="0" Target="LanguageBox" Style="{StaticResource LabelStyle}" Content="La_nguage" />
+            <Label Grid.Row="19" Grid.Column="0" Target="LanguageBox" Style="{StaticResource LabelStyle}" Content="语言(_N)" />
             <ComboBox Grid.Row="19" Grid.Column="1" x:Name="LanguageBox" Text="{Binding PackageMetadata.Language}" IsEditable="true" IsReadOnly="False" Width="120" HorizontalAlignment="Left" Style="{StaticResource ComboBoxStyle}" />
 
             <!-- Tags -->
-            <Label Grid.Row="20" Grid.Column="0" Target="TagsBox" Style="{StaticResource LabelStyle}" Content="Ta_gs" />
+            <Label Grid.Row="20" Grid.Column="0" Target="TagsBox" Style="{StaticResource LabelStyle}" Content="标签(_G)" />
             <TextBox Grid.Row="20" Grid.Column="1" x:Name="TagsBox" Text="{Binding PackageMetadata.Tags}" />
 
             <!-- Serviceable -->
-            <CheckBox Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" IsChecked="{Binding PackageMetadata.Serviceable}" Content="_Serviceable" Style="{StaticResource CheckBoxStyle}" />
+            <CheckBox Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" IsChecked="{Binding PackageMetadata.Serviceable}" Content="可用性(_S)" Style="{StaticResource CheckBoxStyle}" />
 
             <!-- Framework assemblies -->
             <Border Grid.Row="22" Grid.ColumnSpan="2" Margin="1,18,2,0" Padding="2,6,2,2" CornerRadius="3" BorderThickness="1" BorderBrush="#D5DFE5">
@@ -214,8 +214,8 @@
                         <BindingGroup x:Name="NewFrameworkAssembly" NotifyOnValidationError="True" />
                     </Grid.BindingGroup>
 
-                    <TextBlock Grid.Column="0" Text="Assembly name" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,3" />
-                    <TextBlock Grid.Column="1" Text="Supported frameworks" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,3" />
+                    <TextBlock Grid.Column="0" Text="程序集名称" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,3" />
+                    <TextBlock Grid.Column="1" Text="支持的框架" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,0,0,3" />
 
                     <ItemsControl x:Name="FrameworkAssembliesList" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" ItemTemplate="{StaticResource FrameworkAssemblyTemplate}"></ItemsControl>
 
@@ -223,7 +223,7 @@
 
                     <TextBox x:Name="NewSupportedFramework" Text="{Binding SupportedFrameworks, UpdateSourceTrigger=Default, BindingGroupName=NewFrameworkAssembly, Converter={StaticResource FrameworkNameConverter}, NotifyOnValidationError=True}" Margin="2" Grid.Column="1" Grid.Row="2" />
 
-                    <self:GrayscaleButton Margin="0,2,0,2" Grid.Column="2" Grid.Row="2" ToolTipService.ToolTip="Add new framework assembly" Click="AddFrameworkAssemblyButtonClicked">                        
+                    <self:GrayscaleButton Margin="0,2,0,2" Grid.Column="2" Grid.Row="2" ToolTipService.ToolTip="添加新的框架程序集" Click="AddFrameworkAssemblyButtonClicked">                        
                         <self:GrayscaleContentPresenter Content="{StaticResource AddIcon}" />
                         <Button.IsEnabled>
                             <Binding ElementName="NewAssemblyName" Path="Text" Converter="{StaticResource nullToBoolConverter}" />
@@ -233,16 +233,16 @@
             </Border>
 
             <!-- Header text for Framework assemblies -->
-            <TextBlock Text="Framework assemblies" FontWeight="SemiBold" Foreground="Navy" Background="White" Grid.Row="22" Grid.ColumnSpan="2" Margin="1,10,1,0" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <TextBlock Text="框架程序集" FontWeight="SemiBold" Foreground="Navy" Background="White" Grid.Row="22" Grid.ColumnSpan="2" Margin="1,10,1,0" HorizontalAlignment="Center" VerticalAlignment="Top" />
 
             <!-- Dependencies -->
-            <Button HorizontalAlignment="Center" Grid.Row="23" Grid.ColumnSpan="2" Margin="1,18,2,0" Padding="15,2" Content="Edit dependencies" Click="EditDependenciesButtonClicked" />
+            <Button HorizontalAlignment="Center" Grid.Row="23" Grid.ColumnSpan="2" Margin="1,18,2,0" Padding="15,2" Content="编辑依赖项" Click="EditDependenciesButtonClicked" />
 
             <!-- Framework references -->
-            <Button HorizontalAlignment="Center" Grid.Row="24" Grid.ColumnSpan="2" Margin="1,18,2,10" Padding="15,2" Content="Edit framework references" Click="EditFrameworkReferencesButtonClicked" />
+            <Button HorizontalAlignment="Center" Grid.Row="24" Grid.ColumnSpan="2" Margin="1,18,2,10" Padding="15,2" Content="编辑框架引用" Click="EditFrameworkReferencesButtonClicked" />
 
             <!-- Filtered assembly references -->
-            <Button HorizontalAlignment="Center" Grid.Row="25" Grid.ColumnSpan="2" Margin="1,18,2,10" Padding="15,2" Content="Edit assembly references" Click="EditReferencesButtonClicked" />
+            <Button HorizontalAlignment="Center" Grid.Row="25" Grid.ColumnSpan="2" Margin="1,18,2,10" Padding="15,2" Content="编辑程序集引用" Click="EditReferencesButtonClicked" />
         </Grid>
     </ScrollViewer>
 </UserControl>
