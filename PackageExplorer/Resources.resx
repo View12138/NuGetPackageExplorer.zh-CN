@@ -118,25 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Dialog_CreatedByLabel" xml:space="preserve">
-    <value>Authors:</value>
+    <value>作者:</value>
   </data>
   <data name="Dialog_DependenciesLabel" xml:space="preserve">
-    <value>Dependencies:</value>
+    <value>依赖项:</value>
   </data>
   <data name="Dialog_DeterministicValidation" xml:space="preserve">
     <value>Deterministic (dll/exe):</value>
   </data>
   <data name="Dialog_DevelopmentDependencyLabel" xml:space="preserve">
-    <value>Development Dependency:</value>
+    <value>开发依赖项:</value>
   </data>
   <data name="Dialog_DownloadingPackage" xml:space="preserve">
-    <value>Downloading package {0} {1}</value>
+    <value>正在下载包 {0} {1}</value>
   </data>
   <data name="Dialog_Errors" xml:space="preserve">
-    <value>Errors</value>
+    <value>错误</value>
   </data>
   <data name="Dialog_FrameworkAssembliesLabel" xml:space="preserve">
-    <value>Framework Assembly References:</value>
+    <value>框架程序集引用:</value>
   </data>
   <data name="Dialog_HasCompilerFlags" xml:space="preserve">
     <value>Compiler Flags:</value>
